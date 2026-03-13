@@ -30,7 +30,7 @@ export default async function DashboardPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Dashboard</h1>
+        <h1 className="font-display text-3xl font-bold text-foreground">Dashboard</h1>
         <p className="text-muted-foreground">
           {format(new Date(), 'EEEE, MMMM d, yyyy')}
         </p>
@@ -41,20 +41,20 @@ export default async function DashboardPage() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Recipes</CardTitle>
-            <UtensilsCrossed className="h-4 w-4 text-muted-foreground" />
+            <UtensilsCrossed className="h-4 w-4 text-primary" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{recipes?.length ?? 0}</div>
-            <p className="text-xs text-muted-foreground">in your library</p>
+            <div className="font-display text-3xl font-bold">{recipes?.length ?? 0}</div>
+            <p className="text-xs text-muted-foreground">in your collection</p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">This Week</CardTitle>
-            <CalendarDays className="h-4 w-4 text-muted-foreground" />
+            <CalendarDays className="h-4 w-4 text-primary" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{weekMeals?.length ?? 0}</div>
+            <div className="font-display text-3xl font-bold">{weekMeals?.length ?? 0}</div>
             <p className="text-xs text-muted-foreground">
               meals planned across {plannedDays} days
             </p>
@@ -63,10 +63,10 @@ export default async function DashboardPage() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Today</CardTitle>
-            <ShoppingCart className="h-4 w-4 text-muted-foreground" />
+            <ShoppingCart className="h-4 w-4 text-primary" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{todayMeals.length}</div>
+            <div className="font-display text-3xl font-bold">{todayMeals.length}</div>
             <p className="text-xs text-muted-foreground">meals planned</p>
           </CardContent>
         </Card>
@@ -75,7 +75,7 @@ export default async function DashboardPage() {
       {/* Today's meals */}
       <div>
         <div className="flex items-center justify-between mb-3">
-          <h2 className="text-lg font-semibold">Today&apos;s Meals</h2>
+          <h2 className="font-display text-xl font-bold">Today&apos;s Meals</h2>
           <Link href="/calendar">
             <Button variant="ghost" size="sm">
               View calendar
@@ -86,9 +86,9 @@ export default async function DashboardPage() {
         {todayMeals.length === 0 ? (
           <Card>
             <CardContent className="py-8 text-center text-muted-foreground">
-              <p>No meals planned for today.</p>
+              <p>Nothing planned for today yet.</p>
               <Link href="/calendar">
-                <Button variant="link" className="mt-1">
+                <Button variant="link" className="mt-1 text-primary">
                   Plan something
                 </Button>
               </Link>
@@ -98,9 +98,9 @@ export default async function DashboardPage() {
           <div className="grid gap-3 sm:grid-cols-2">
             {todayMeals.map((meal: MealPlan) => (
               <Link key={meal.id} href={`/recipes/${meal.recipe_id}`}>
-                <Card className="hover:shadow-md transition-shadow cursor-pointer">
+                <Card className="hover:shadow-md transition-shadow cursor-pointer hover:border-primary/30">
                   <CardContent className="pt-4">
-                    <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
+                    <p className="text-xs uppercase tracking-wide text-primary font-semibold mb-1">
                       {meal.meal_type}
                     </p>
                     <p className="font-semibold">{meal.recipe?.name}</p>
@@ -115,7 +115,7 @@ export default async function DashboardPage() {
       {/* This week overview */}
       <div>
         <div className="flex items-center justify-between mb-3">
-          <h2 className="text-lg font-semibold">This Week</h2>
+          <h2 className="font-display text-xl font-bold">This Week</h2>
         </div>
         <div className="grid grid-cols-4 gap-2 sm:grid-cols-7">
           {Array.from({ length: 7 }, (_, i) => {
@@ -129,14 +129,14 @@ export default async function DashboardPage() {
             return (
               <div
                 key={dateStr}
-                className={`rounded-lg border p-2 text-center ${
-                  isToday ? 'border-blue-400 bg-blue-50/50' : ''
+                className={`rounded-xl border p-2 text-center ${
+                  isToday ? 'border-primary bg-primary/5' : ''
                 }`}
               >
                 <p className="text-xs font-medium text-muted-foreground">
                   {format(day, 'EEE')}
                 </p>
-                <p className={`text-lg font-bold ${isToday ? 'text-blue-600' : ''}`}>
+                <p className={`font-display text-xl font-bold ${isToday ? 'text-primary' : ''}`}>
                   {format(day, 'd')}
                 </p>
                 <p className="text-xs text-muted-foreground">
