@@ -7,10 +7,10 @@ import { Recipe } from '@/lib/types'
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
     <Link href={`/recipes/${recipe.id}`}>
-      <Card className="h-full transition-shadow hover:shadow-md cursor-pointer">
+      <Card className="h-full transition-all hover:shadow-md hover:border-primary/30 cursor-pointer">
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between gap-2">
-            <CardTitle className="text-base leading-tight">
+            <CardTitle className="font-display text-xl leading-tight">
               {recipe.name}
             </CardTitle>
             <Badge variant="secondary" className="shrink-0">
@@ -30,7 +30,7 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
             </span>
           </div>
           {recipe.source && (
-            <p className="mt-2 text-xs text-muted-foreground">
+            <p className="mt-2 text-xs text-muted-foreground italic">
               by {recipe.source}
             </p>
           )}
