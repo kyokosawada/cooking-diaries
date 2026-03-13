@@ -58,12 +58,12 @@ export function AddMealDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-h-[80vh] overflow-hidden flex flex-col">
         <DialogHeader>
-          <DialogTitle>
+          <DialogTitle className="font-display text-xl">
             Add {mealType} for {date}
           </DialogTitle>
         </DialogHeader>
         <Input
-          placeholder="Search recipes..."
+          placeholder="Search your recipes..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -72,7 +72,7 @@ export function AddMealDialog({
             <button
               key={recipe.id}
               onClick={() => selectRecipe(recipe.id)}
-              className="w-full text-left rounded-md px-3 py-2 text-sm hover:bg-gray-100 transition-colors"
+              className="w-full text-left rounded-lg px-3 py-2 text-sm hover:bg-accent transition-colors"
             >
               <span className="font-medium">{recipe.name}</span>
               <span className="text-muted-foreground ml-2">
