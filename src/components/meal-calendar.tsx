@@ -59,7 +59,7 @@ export function MealCalendar({ mealPlans }: MealCalendarProps) {
         >
           <ChevronLeft className="h-4 w-4" />
         </Button>
-        <h2 className="text-lg font-semibold">
+        <h2 className="font-display text-xl font-bold">
           Week of {format(weekStart, 'MMM d, yyyy')}
         </h2>
         <Button
@@ -77,13 +77,13 @@ export function MealCalendar({ mealPlans }: MealCalendarProps) {
           return (
             <div
               key={day.toISOString()}
-              className={`rounded-lg border p-3 sm:p-2 sm:min-h-[160px] ${
-                isToday ? 'border-blue-400 bg-blue-50/50' : ''
+              className={`rounded-xl border p-3 sm:p-2 sm:min-h-[160px] ${
+                isToday ? 'border-primary bg-primary/5' : ''
               }`}
             >
               <div className="text-sm sm:text-xs font-medium text-muted-foreground mb-2">
                 {format(day, 'EEE')}
-                <span className={`ml-1 ${isToday ? 'text-blue-600 font-bold' : ''}`}>
+                <span className={`ml-1 ${isToday ? 'text-primary font-bold' : ''}`}>
                   {format(day, 'd')}
                 </span>
               </div>
@@ -92,11 +92,11 @@ export function MealCalendar({ mealPlans }: MealCalendarProps) {
                 const meal = getMeal(day, mealType)
                 return (
                   <div key={mealType} className="mb-1.5">
-                    <span className="text-xs sm:text-[10px] uppercase tracking-wide text-muted-foreground">
+                    <span className="text-xs sm:text-[10px] uppercase tracking-wide text-primary/70 font-semibold">
                       {mealType}
                     </span>
                     {meal?.recipe ? (
-                      <div className="group flex items-start gap-1 rounded bg-gray-50 p-1.5 text-xs">
+                      <div className="group flex items-start gap-1 rounded-lg bg-accent p-1.5 text-xs">
                         <Link
                           href={`/recipes/${meal.recipe_id}`}
                           className="flex-1 hover:underline font-medium leading-tight"
@@ -107,13 +107,13 @@ export function MealCalendar({ mealPlans }: MealCalendarProps) {
                           onClick={() => removeMeal(meal.id)}
                           className="opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
                         >
-                          <X className="h-3 w-3 text-muted-foreground hover:text-red-500" />
+                          <X className="h-3 w-3 text-muted-foreground hover:text-destructive" />
                         </button>
                       </div>
                     ) : (
                       <button
                         onClick={() => openAddDialog(day, mealType)}
-                        className="flex w-full items-center justify-center rounded border border-dashed p-1.5 text-xs text-muted-foreground hover:border-gray-400 hover:text-gray-600 transition-colors"
+                        className="flex w-full items-center justify-center rounded-lg border border-dashed p-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary transition-colors"
                       >
                         <Plus className="h-3 w-3 mr-0.5" />
                         Add
