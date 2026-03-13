@@ -114,14 +114,14 @@ export function GroceryList({ groceryItems, mealPlans }: GroceryListProps) {
         <div className="space-y-6">
           {sortedCategories.map((category) => (
             <div key={category}>
-              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">
+              <h3 className="font-display text-lg font-bold text-muted-foreground mb-2">
                 {category}
               </h3>
               <div className="space-y-1">
                 {grouped[category].map((item) => (
                   <label
                     key={item.id}
-                    className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-gray-50 cursor-pointer"
+                    className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-accent cursor-pointer transition-colors"
                   >
                     <Checkbox
                       checked={item.checked}
