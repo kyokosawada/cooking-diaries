@@ -18,7 +18,7 @@ export default async function GroceryPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Grocery List</h1>
+        <h1 className="font-display text-3xl font-bold">Grocery List</h1>
         <p className="text-muted-foreground">
           Auto-generated from your meal plan
         </p>

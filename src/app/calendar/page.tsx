@@ -12,7 +12,7 @@ export default async function CalendarPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Meal Calendar</h1>
+        <h1 className="font-display text-3xl font-bold">Meal Calendar</h1>
         <p className="text-muted-foreground">
           Plan your lunch and dinner for the week
         </p>
