@@ -71,17 +71,17 @@ export function MealCalendar({ mealPlans }: MealCalendarProps) {
         </Button>
       </div>
 
-      <div className="grid grid-cols-7 gap-2">
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-7">
         {days.map((day) => {
           const isToday = isSameDay(day, new Date())
           return (
             <div
               key={day.toISOString()}
-              className={`rounded-lg border p-2 min-h-[160px] ${
+              className={`rounded-lg border p-3 sm:p-2 sm:min-h-[160px] ${
                 isToday ? 'border-blue-400 bg-blue-50/50' : ''
               }`}
             >
-              <div className="text-xs font-medium text-muted-foreground mb-2">
+              <div className="text-sm sm:text-xs font-medium text-muted-foreground mb-2">
                 {format(day, 'EEE')}
                 <span className={`ml-1 ${isToday ? 'text-blue-600 font-bold' : ''}`}>
                   {format(day, 'd')}
@@ -92,7 +92,7 @@ export function MealCalendar({ mealPlans }: MealCalendarProps) {
                 const meal = getMeal(day, mealType)
                 return (
                   <div key={mealType} className="mb-1.5">
-                    <span className="text-[10px] uppercase tracking-wide text-muted-foreground">
+                    <span className="text-xs sm:text-[10px] uppercase tracking-wide text-muted-foreground">
                       {mealType}
                     </span>
                     {meal?.recipe ? (

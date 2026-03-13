@@ -46,7 +46,7 @@ export default async function RecipeDetailPage({
           </Badge>
         </div>
 
-        <div className="mt-3 flex items-center gap-6 text-sm text-muted-foreground">
+        <div className="mt-3 flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
           <span className="flex items-center gap-1.5">
             <Clock className="h-4 w-4" />
             {recipe.cook_time} min

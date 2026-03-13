@@ -117,7 +117,7 @@ export default async function DashboardPage() {
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-lg font-semibold">This Week</h2>
         </div>
-        <div className="grid grid-cols-7 gap-2">
+        <div className="grid grid-cols-4 gap-2 sm:grid-cols-7">
           {Array.from({ length: 7 }, (_, i) => {
             const day = addDays(new Date(weekStart), i)
             const dateStr = format(day, 'yyyy-MM-dd')
