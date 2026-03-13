@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Caveat, Lora } from 'next/font/google'
 import './globals.css'
 import { Nav } from '@/components/nav'
 
-const inter = Inter({ subsets: ['latin'] })
+const caveat = Caveat({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-caveat' })
+const lora = Lora({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-lora' })
 
 export const metadata: Metadata = {
-  title: 'Cook — Personal Cooking Guide',
-  description: 'Plan meals, track ingredients, and learn to cook',
+  title: 'Cooking Diary — Personal Cooking Guide',
+  description: 'Your personal recipe journal, meal planner, and grocery list',
 }
 
 export default function RootLayout({
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${caveat.variable} ${lora.variable} font-serif`}>
         <Nav />
         <main className="mx-auto max-w-5xl px-4 py-6">
           {children}
