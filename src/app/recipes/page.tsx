@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { createClient } from '@/lib/supabase/server'
 import { RecipeCard } from '@/components/recipe-card'
 import { RecipeFilters } from '@/components/recipe-filters'

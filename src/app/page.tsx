@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { createClient } from '@/lib/supabase/server'
 import { format, startOfWeek, endOfWeek, addDays } from 'date-fns'
 import Link from 'next/link'

@@ -740,4 +740,211 @@ VALUES
   NULL,
   'Ethan Chlebowski',
   'Watch the broiler closely — things can char in seconds.'
+),
+
+-- Filipino Recipes
+
+(
+  'Chicken Adobo',
+  'Filipino',
+  35,
+  'Easy',
+  '4',
+  '[
+    {"name": "chicken thighs (bone-in)", "quantity": "750", "unit": "g", "category": "Protein"},
+    {"name": "garlic cloves, minced", "quantity": "6", "unit": "whole", "category": "Produce"},
+    {"name": "soy sauce", "quantity": "0.33", "unit": "cup", "category": "Sauces"},
+    {"name": "white vinegar", "quantity": "0.33", "unit": "cup", "category": "Pantry"},
+    {"name": "dried bay leaves", "quantity": "3", "unit": "whole", "category": "Spices"},
+    {"name": "cooking oil", "quantity": "2", "unit": "tbsp", "category": "Pantry"},
+    {"name": "brown onion, diced", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "water", "quantity": "1.5", "unit": "cups", "category": "Other"},
+    {"name": "brown sugar", "quantity": "2", "unit": "tbsp", "category": "Pantry"},
+    {"name": "whole black peppercorns", "quantity": "1", "unit": "tbsp", "category": "Spices"},
+    {"name": "green onions, sliced", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "steamed white rice", "quantity": "", "unit": "for serving", "category": "Grains"}
+  ]'::jsonb,
+  '[
+    "Marinate chicken with garlic, soy sauce, vinegar, and bay leaves. Refrigerate at least 20 min (1-3 hours is ideal).",
+    "Heat 1 tbsp oil in a large pan over high heat. Sear chicken 1-2 min per side until browned. Set aside.",
+    "Add remaining oil. Sauté onion and garlic 1-2 min until fragrant.",
+    "Pour in reserved marinade, water, brown sugar, and peppercorns. Scrape up browned bits. Simmer 5 min.",
+    "Return chicken skin-side down. Simmer uncovered on medium 20-25 min, flipping at 15 min, until sauce reduces to a glaze.",
+    "Serve over steamed rice, drenched in sauce, topped with sliced green onions."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=mtyULaM6RfQ',
+  NULL,
+  'Panlasang Pinoy',
+  'Use chicken thighs, not breast — they stay juicy even if slightly overcooked. Don''t stir the vinegar when you first add it so it doesn''t turn bitter.'
+),
+
+(
+  'Pancit Canton (Stir-Fried Noodles)',
+  'Filipino',
+  30,
+  'Easy',
+  '6',
+  '[
+    {"name": "dried pancit canton noodles", "quantity": "250", "unit": "g", "category": "Grains"},
+    {"name": "pork, thinly sliced", "quantity": "115", "unit": "g", "category": "Protein"},
+    {"name": "Chinese sausage (lap cheong), sliced", "quantity": "1", "unit": "whole", "category": "Protein"},
+    {"name": "medium shrimp, peeled", "quantity": "8", "unit": "whole", "category": "Protein"},
+    {"name": "snap peas, trimmed", "quantity": "10", "unit": "whole", "category": "Produce"},
+    {"name": "carrot, julienned", "quantity": "0.75", "unit": "cup", "category": "Produce"},
+    {"name": "cabbage, chopped", "quantity": "1", "unit": "small head", "category": "Produce"},
+    {"name": "onion, sliced", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "garlic, minced", "quantity": "1", "unit": "tsp", "category": "Produce"},
+    {"name": "soy sauce", "quantity": "3", "unit": "tbsp", "category": "Sauces"},
+    {"name": "oyster sauce", "quantity": "1", "unit": "tbsp", "category": "Sauces"},
+    {"name": "chicken broth", "quantity": "1.5", "unit": "cups", "category": "Pantry"},
+    {"name": "water", "quantity": "0.75", "unit": "cup", "category": "Other"},
+    {"name": "cooking oil", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "salt and pepper", "quantity": "", "unit": "to taste", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Blanch snap peas, carrots, and cabbage in boiling water 35-50 sec. Transfer to ice bath. Drain and set aside.",
+    "Heat oil in a wok over medium-high. Sauté onion 1 min, add garlic 30 sec.",
+    "Add pork and Chinese sausage, cook 2 min until pork is browned.",
+    "Pour in soy sauce and oyster sauce. Stir to coat.",
+    "Add chicken broth and water. Season with salt and pepper. Bring to a boil, simmer 5-10 min.",
+    "Add shrimp, cook 3 min until pink.",
+    "Add dried noodles directly into the broth. Fold and stir until liquid is absorbed and noodles are tender (3-5 min).",
+    "Toss in blanched vegetables. Stir 1-2 min. Serve."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=G1SZncDYXzw',
+  NULL,
+  'Panlasang Pinoy',
+  'Do NOT pre-soak or boil the noodles — they cook directly in the broth so they absorb all the flavor.'
+),
+
+(
+  'Sinangag (Filipino Garlic Fried Rice)',
+  'Filipino',
+  15,
+  'Easy',
+  '3-4',
+  '[
+    {"name": "cooked white rice (day-old, chilled)", "quantity": "4", "unit": "cups", "category": "Grains"},
+    {"name": "garlic (1 head), minced", "quantity": "8", "unit": "cloves", "category": "Produce"},
+    {"name": "neutral cooking oil", "quantity": "0.25", "unit": "cup", "category": "Pantry"},
+    {"name": "salt", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "pepper", "quantity": "", "unit": "to taste", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Break up cold day-old rice with your hands or a fork. Separate all clumps so grains are loose.",
+    "Heat oil in a wide skillet over LOW heat. Add minced garlic to the cool oil. Cook slowly, stirring, until golden and crispy (3-4 min).",
+    "Remove 3/4 of the crispy garlic with a slotted spoon. Set aside on paper towel for garnish.",
+    "Turn heat to HIGH. Add rice, spread in an even layer. Let sit 45 sec to sizzle, then toss. Repeat for 4-5 min until heated and toasty.",
+    "Season with salt and pepper. Top with reserved crispy garlic.",
+    "Serve alongside a fried egg, tocino, or any main dish."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=6sQA13xd0kY',
+  NULL,
+  'No Recipes',
+  'Start garlic in cold oil, not hot — this gives you evenly crispy garlic instead of burnt bits. Day-old rice is essential.'
+),
+
+(
+  'Bistek Tagalog (Filipino Beef Steak)',
+  'Filipino',
+  45,
+  'Easy',
+  '4-5',
+  '[
+    {"name": "beef sirloin, thinly sliced against the grain", "quantity": "900", "unit": "g", "category": "Protein"},
+    {"name": "soy sauce", "quantity": "0.25", "unit": "cup", "category": "Sauces"},
+    {"name": "lemon juice (or calamansi)", "quantity": "0.25", "unit": "cup", "category": "Produce"},
+    {"name": "ground black pepper", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "garlic cloves, minced", "quantity": "3", "unit": "whole", "category": "Produce"},
+    {"name": "large onions", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "cooking oil", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "water", "quantity": "1", "unit": "cup", "category": "Other"},
+    {"name": "salt", "quantity": "", "unit": "to taste", "category": "Spices"},
+    {"name": "steamed white rice", "quantity": "", "unit": "for serving", "category": "Grains"}
+  ]'::jsonb,
+  '[
+    "Marinate beef in soy sauce, lemon juice, and black pepper for at least 30 min (overnight is best).",
+    "Slice 1 onion into rings, the other thinly. Heat 1 tbsp oil and fry onion rings until caramelized. Set aside.",
+    "Drain beef, reserve marinade. Sear beef in 1 tbsp oil, about 1 min per side. Set aside.",
+    "Add remaining oil. Sauté thin-sliced onion and garlic until soft.",
+    "Pour in reserved marinade and water. Bring to a boil.",
+    "Return beef. Cover and simmer on low 30-45 min until fork-tender, adding water if needed.",
+    "Top with fried onion rings. Serve over steamed rice."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=IiOnMsOJCYI',
+  NULL,
+  'Kawaling Pinoy',
+  'Slice beef thin and against the grain for tender results. Ask your butcher to do it if you''re not confident.'
+),
+
+(
+  'Pork Sinigang (Sour Tamarind Soup)',
+  'Filipino',
+  45,
+  'Easy',
+  '4-6',
+  '[
+    {"name": "pork spare ribs, cut into 2-inch pieces", "quantity": "900", "unit": "g", "category": "Protein"},
+    {"name": "water", "quantity": "8", "unit": "cups", "category": "Other"},
+    {"name": "tomatoes, quartered", "quantity": "2", "unit": "large", "category": "Produce"},
+    {"name": "onion, quartered", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "fish sauce (patis)", "quantity": "2", "unit": "tbsp", "category": "Sauces"},
+    {"name": "tamarind soup base mix (sinigang mix)", "quantity": "1.5", "unit": "packets", "category": "Pantry"},
+    {"name": "taro (gabi), peeled and halved", "quantity": "6", "unit": "pieces", "category": "Produce"},
+    {"name": "daikon radish, sliced", "quantity": "1", "unit": "piece", "category": "Produce"},
+    {"name": "finger chilies", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "long beans (sitaw), cut 3-inch", "quantity": "0.5", "unit": "bunch", "category": "Produce"},
+    {"name": "Chinese eggplant, sliced", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "okra, trimmed", "quantity": "6", "unit": "whole", "category": "Produce"},
+    {"name": "bok choy or pechay", "quantity": "1", "unit": "bunch", "category": "Produce"},
+    {"name": "salt and pepper", "quantity": "", "unit": "to taste", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Place pork ribs in a large pot, cover with water. Bring to a boil and skim off scum for a clear broth.",
+    "Add tomatoes, onion, and fish sauce. Lower heat and simmer covered 40 min until pork is tender.",
+    "Add taro, cook 4-6 min. Then add chilies and daikon, simmer 2-3 min.",
+    "Add long beans 2 min, then eggplant and okra 1-2 min.",
+    "Dissolve tamarind soup base into the broth. Taste and adjust sourness.",
+    "Season with salt and pepper. Add bok choy, cover, turn off heat. Let wilt 1-2 min.",
+    "Serve hot with steamed rice."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=WmfwqjdJH3Y',
+  NULL,
+  'Kawaling Pinoy',
+  'Use tamarind soup base packets (like Knorr Sinigang mix from Asian grocery stores) — easiest option for beginners with authentic flavor. Add vegetables in stages so nothing gets mushy.'
+),
+
+(
+  'Lumpia Shanghai (Filipino Spring Rolls)',
+  'Filipino',
+  25,
+  'Easy',
+  '5-6',
+  '[
+    {"name": "ground pork", "quantity": "680", "unit": "g", "category": "Protein"},
+    {"name": "onions, minced", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "carrots, minced", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "garlic cloves, minced", "quantity": "3", "unit": "whole", "category": "Produce"},
+    {"name": "garlic powder", "quantity": "1.5", "unit": "tsp", "category": "Spices"},
+    {"name": "soy sauce", "quantity": "1", "unit": "tbsp", "category": "Sauces"},
+    {"name": "salt", "quantity": "1.5", "unit": "tsp", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "sesame oil", "quantity": "1", "unit": "tbsp", "category": "Sauces"},
+    {"name": "eggs", "quantity": "2", "unit": "whole", "category": "Protein"},
+    {"name": "lumpia (spring roll) wrappers", "quantity": "50", "unit": "sheets", "category": "Grains"},
+    {"name": "cooking oil for deep frying", "quantity": "3", "unit": "cups", "category": "Pantry"},
+    {"name": "sweet chili sauce", "quantity": "", "unit": "for dipping", "category": "Sauces"}
+  ]'::jsonb,
+  '[
+    "Combine ground pork, onions, carrots, garlic, garlic powder, soy sauce, salt, pepper, sesame oil, and eggs. Mix thoroughly.",
+    "Place 1-1.5 tbsp filling along the bottom edge of a wrapper. Fold sides inward, roll tightly. Dab water on top edge to seal.",
+    "Heat 2-3 inches of oil in a deep pot to 350°F/175°C.",
+    "Fry in batches 3-4 min, turning occasionally, until golden brown and crispy.",
+    "Drain on a wire rack (not paper towels — keeps them crispier).",
+    "Serve immediately with sweet chili sauce or vinegar-garlic dip."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=7lhbplkueu0',
+  NULL,
+  'Kawaling Pinoy',
+  'Don''t overfill the wrappers — about 1 tbsp is the sweet spot. Roll tightly to prevent bursting. You can freeze uncooked lumpia and fry straight from frozen.'
 );

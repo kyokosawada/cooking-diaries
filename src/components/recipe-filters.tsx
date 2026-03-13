@@ -14,6 +14,7 @@ const cuisines = [
   'All',
   'Chinese',
   'Chinese-American',
+  'Filipino',
   'Japanese',
   'Korean',
   'Thai',
