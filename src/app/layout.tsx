@@ -1,40 +1,28 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { cn } from "@/lib/utils";
-import "./globals.css";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import { Nav } from '@/components/nav'
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Cook",
-  description: "Personal cooking guide & meal planner",
-};
+  title: 'Cook — Personal Cooking Guide',
+  description: 'Plan meals, track ingredients, and learn to cook',
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          geistSans.variable,
-          geistMono.variable,
-          "font-sans antialiased"
-        )}
-      >
-        {children}
+      <body className={inter.className}>
+        <Nav />
+        <main className="mx-auto max-w-5xl px-4 py-6">
+          {children}
+        </main>
       </body>
     </html>
-  );
+  )
 }
