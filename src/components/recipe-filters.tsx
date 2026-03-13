@@ -45,7 +45,7 @@ export function RecipeFilters() {
   return (
     <div className="flex flex-col gap-3 sm:flex-row">
       <Input
-        placeholder="Search recipes..."
+        placeholder="Search your recipes..."
         defaultValue={searchParams.get('q') ?? ''}
         onChange={(e) => updateParam('q', e.target.value)}
         className="sm:max-w-xs"
