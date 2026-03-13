@@ -32,7 +32,7 @@ export default async function RecipeDetailPage({
     <div className="space-y-6">
       <Link
         href="/recipes"
-        className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary"
       >
         <ArrowLeft className="h-4 w-4" />
         Back to recipes
@@ -40,8 +40,8 @@ export default async function RecipeDetailPage({
 
       <div>
         <div className="flex items-start justify-between gap-4">
-          <h1 className="text-3xl font-bold">{recipe.name}</h1>
-          <Badge variant="secondary" className="text-sm">
+          <h1 className="font-display text-4xl font-bold">{recipe.name}</h1>
+          <Badge variant="secondary" className="text-sm shrink-0">
             {recipe.cuisine}
           </Badge>
         </div>
@@ -62,7 +62,7 @@ export default async function RecipeDetailPage({
         </div>
 
         {recipe.source && (
-          <p className="mt-2 text-sm text-muted-foreground">
+          <p className="mt-2 text-sm text-muted-foreground italic">
             Recipe by <span className="font-medium">{recipe.source}</span>
           </p>
         )}
@@ -70,7 +70,7 @@ export default async function RecipeDetailPage({
 
       {/* YouTube Video */}
       {youtubeEmbedUrl && (
-        <div className="aspect-video overflow-hidden rounded-lg border">
+        <div className="aspect-video overflow-hidden rounded-xl border">
           <iframe
             src={youtubeEmbedUrl}
             title={recipe.name}
@@ -86,7 +86,7 @@ export default async function RecipeDetailPage({
           href={recipe.youtube_url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm text-blue-600 hover:underline"
+          className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline"
         >
           <ExternalLink className="h-3.5 w-3.5" />
           Open on YouTube
@@ -97,12 +97,12 @@ export default async function RecipeDetailPage({
 
       {/* Ingredients */}
       <div>
-        <h2 className="text-xl font-semibold mb-3">Ingredients</h2>
+        <h2 className="font-display text-2xl font-bold mb-3">Ingredients</h2>
         <ul className="space-y-2">
           {(recipe.ingredients as Ingredient[]).map(
             (ing: Ingredient, i: number) => (
               <li key={i} className="flex items-baseline gap-2 text-sm">
-                <span className="font-medium shrink-0">
+                <span className="font-medium text-primary shrink-0">
                   {ing.quantity} {ing.unit}
                 </span>
                 <span>{ing.name}</span>
@@ -116,11 +116,11 @@ export default async function RecipeDetailPage({
 
       {/* Steps */}
       <div>
-        <h2 className="text-xl font-semibold mb-3">Instructions</h2>
+        <h2 className="font-display text-2xl font-bold mb-3">Instructions</h2>
         <ol className="space-y-4">
           {(recipe.steps as string[]).map((step: string, i: number) => (
             <li key={i} className="flex gap-3 text-sm">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 text-xs font-medium">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-medium text-primary">
                 {i + 1}
               </span>
               <span className="pt-0.5">{step}</span>
@@ -133,8 +133,8 @@ export default async function RecipeDetailPage({
       {recipe.tips && (
         <>
           <Separator />
-          <div className="rounded-lg bg-amber-50 border border-amber-200 p-4">
-            <h3 className="text-sm font-semibold text-amber-800 mb-1">
+          <div className="rounded-xl bg-amber-50 border border-amber-200 p-4">
+            <h3 className="font-display text-lg font-bold text-amber-800 mb-1">
               Beginner Tip
             </h3>
             <p className="text-sm text-amber-700">{recipe.tips}</p>
