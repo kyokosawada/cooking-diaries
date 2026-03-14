@@ -8,15 +8,19 @@ import { Recipe } from '@/lib/types'
 export default async function RecipesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string; cuisine?: string }>
+  searchParams: Promise<{ q?: string; cuisine?: string; difficulty?: string }>
 }) {
-  const { q, cuisine } = await searchParams
+  const { q, cuisine, difficulty } = await searchParams
   const supabase = await createClient()
 
   let query = supabase.from('recipes').select('*').order('cuisine').order('name')
 
   if (cuisine) {
     query = query.eq('cuisine', cuisine)
+  }
+
+  if (difficulty) {
+    query = query.eq('difficulty', difficulty)
   }
 
   if (q) {
@@ -30,7 +34,7 @@ export default async function RecipesPage({
       <div>
         <h1 className="font-display text-3xl font-bold">Recipes</h1>
         <p className="text-muted-foreground">
-          {recipes?.length ?? 0} beginner-friendly recipes
+          {recipes?.length ?? 0} recipes
         </p>
       </div>
 

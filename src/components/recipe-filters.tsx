@@ -12,22 +12,24 @@ import {
 
 const cuisines = [
   'All',
+  'American',
+  'Brazilian/Indian',
   'Chinese',
   'Chinese-American',
   'Filipino',
-  'Japanese',
-  'Korean',
-  'Thai',
+  'French/American',
+  'Indian',
   'Italian',
   'Italian-American',
-  'American',
-  'French/American',
-  'Brazilian/Indian',
-  'Indian',
+  'Japanese',
+  'Korean',
   'Mediterranean',
   'Mexican',
   'Middle Eastern',
+  'Thai',
 ]
+
+const difficulties = ['All', 'Easy', 'Medium']
 
 export function RecipeFilters() {
   const router = useRouter()
@@ -62,6 +64,21 @@ export function RecipeFilters() {
           {cuisines.map((c) => (
             <SelectItem key={c} value={c}>
               {c}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+      <Select
+        defaultValue={searchParams.get('difficulty') ?? 'All'}
+        onValueChange={(v) => updateParam('difficulty', v)}
+      >
+        <SelectTrigger className="sm:w-40">
+          <SelectValue placeholder="Difficulty" />
+        </SelectTrigger>
+        <SelectContent>
+          {difficulties.map((d) => (
+            <SelectItem key={d} value={d}>
+              {d}
             </SelectItem>
           ))}
         </SelectContent>

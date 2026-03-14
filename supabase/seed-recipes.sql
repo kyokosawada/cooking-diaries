@@ -947,4 +947,447 @@ VALUES
   NULL,
   'Kawaling Pinoy',
   'Don''t overfill the wrappers — about 1 tbsp is the sweet spot. Roll tightly to prevent bursting. You can freeze uncooked lumpia and fry straight from frozen.'
+),
+
+(
+  'Mechado (Filipino Beef Stew)',
+  'Filipino',
+  50,
+  'Easy',
+  '4',
+  '[
+    {"name": "beef chuck, cut into 2-inch cubes", "quantity": "1.5", "unit": "lb", "category": "Protein"},
+    {"name": "tomato sauce", "quantity": "1", "unit": "8 oz can", "category": "Sauces"},
+    {"name": "soy sauce", "quantity": "4", "unit": "tbsp", "category": "Sauces"},
+    {"name": "lemon or calamansi juice", "quantity": "0.25", "unit": "cup", "category": "Produce"},
+    {"name": "beef broth", "quantity": "1.5", "unit": "cups", "category": "Other"},
+    {"name": "baking potato, peeled and cubed", "quantity": "1", "unit": "large", "category": "Produce"},
+    {"name": "carrots, peeled and cut into 2-inch pieces", "quantity": "2", "unit": "medium", "category": "Produce"},
+    {"name": "red bell pepper, cut into squares", "quantity": "1", "unit": "large", "category": "Produce"},
+    {"name": "green bell pepper, cut into squares", "quantity": "1", "unit": "small", "category": "Produce"},
+    {"name": "ripe tomato, cubed", "quantity": "1", "unit": "medium", "category": "Produce"},
+    {"name": "red onion, chopped", "quantity": "1", "unit": "medium", "category": "Produce"},
+    {"name": "garlic cloves, minced", "quantity": "5", "unit": "whole", "category": "Produce"},
+    {"name": "dried bay leaves", "quantity": "2", "unit": "whole", "category": "Spices"},
+    {"name": "cooking oil", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "salt and pepper", "quantity": "", "unit": "to taste", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Combine beef cubes with soy sauce and lemon juice in a bowl. Marinate for at least 1 hour (overnight is best).",
+    "Heat oil in a large pot or pressure cooker over medium-high heat. Sauté onion until translucent, about 2 min.",
+    "Add garlic and cubed tomato. Cook 2-3 min until tomato softens and breaks down.",
+    "Add marinated beef along with the marinade. Brown the beef on all sides, about 3-4 min.",
+    "Pour in tomato sauce and beef broth. Stir well and bring to a boil.",
+    "Add bay leaves. If using a pressure cooker, cover and cook 20-25 min. If using a regular pot, lower heat, cover, and simmer 1.5-2 hours until beef is fork-tender.",
+    "Add potatoes and carrots. Cook uncovered on medium heat 8-10 min until vegetables are tender.",
+    "Add bell peppers. Cook 2-3 min until tender-crisp.",
+    "Season with salt and pepper. Discard bay leaves. Serve hot over steamed rice."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=DQTzWfE6mZg',
+  NULL,
+  'Panlasang Pinoy',
+  'A pressure cooker cuts braising time from 2 hours to 25 minutes. Marinate the beef overnight for maximum flavor. If you don''t have calamansi, regular lemon juice works great.'
+),
+
+(
+  'Pinakbet (Filipino Vegetable Stew)',
+  'Filipino',
+  40,
+  'Easy',
+  '4-5',
+  '[
+    {"name": "pork belly, cut into 1-inch cubes", "quantity": "0.5", "unit": "lb", "category": "Protein"},
+    {"name": "shrimp paste (bagoong alamang)", "quantity": "3", "unit": "tbsp", "category": "Sauces"},
+    {"name": "kabocha squash (kalabasa), peeled and cubed", "quantity": "1", "unit": "cup", "category": "Produce"},
+    {"name": "okra, ends trimmed and halved", "quantity": "5", "unit": "whole", "category": "Produce"},
+    {"name": "long beans (sitaw), cut into 3-inch lengths", "quantity": "0.5", "unit": "bunch", "category": "Produce"},
+    {"name": "bitter melon (ampalaya), seeded and sliced", "quantity": "1", "unit": "medium", "category": "Produce"},
+    {"name": "eggplant, cut into 1-inch pieces", "quantity": "1", "unit": "large", "category": "Produce"},
+    {"name": "Roma tomatoes, chopped", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "onion, chopped", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "garlic cloves, minced", "quantity": "3", "unit": "whole", "category": "Produce"},
+    {"name": "water", "quantity": "2", "unit": "cups", "category": "Other"},
+    {"name": "cooking oil", "quantity": "1", "unit": "tbsp", "category": "Pantry"},
+    {"name": "salt and pepper", "quantity": "", "unit": "to taste", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Heat oil in a large pot over medium heat. Sauté onion and garlic until softened, about 2 min.",
+    "Add pork belly cubes. Cook 3-5 min, stirring occasionally, until lightly browned on all sides.",
+    "Add shrimp paste (bagoong). Stir and cook 2 min until it starts to caramelize and become fragrant.",
+    "Add chopped tomatoes. Cook 3-4 min, mashing with a spoon, until softened and juices release.",
+    "Pour in water and bring to a boil. Lower heat, cover, and simmer 15-20 min until pork is tender. Keep about 1 cup of liquid — add more water if needed.",
+    "Add squash (kalabasa). Cook 4 min until nearly tender.",
+    "Add long beans and cook 2 min until tender-crisp.",
+    "Add bitter melon, eggplant, and okra. Cook 4-5 min until all vegetables are tender but still have a slight bite.",
+    "Season with salt and pepper to taste. Serve hot over steamed rice."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=kqjPLRwQ71U',
+  NULL,
+  'Kawaling Pinoy',
+  'Add vegetables in stages from hardest to softest — squash first, leafy greens last. This keeps everything perfectly cooked. If you can''t find bitter melon, just leave it out — the dish is still delicious without it.'
+),
+
+(
+  'Lechon Kawali (Crispy Pork Belly)',
+  'Filipino',
+  50,
+  'Medium',
+  '6',
+  '[
+    {"name": "pork belly, skin on, whole slab", "quantity": "2", "unit": "lb", "category": "Protein"},
+    {"name": "salt", "quantity": "2", "unit": "tbsp", "category": "Spices"},
+    {"name": "whole black peppercorns", "quantity": "1", "unit": "tbsp", "category": "Spices"},
+    {"name": "dried bay leaves", "quantity": "3", "unit": "whole", "category": "Spices"},
+    {"name": "garlic head, crushed", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "water, enough to cover pork", "quantity": "6", "unit": "cups", "category": "Other"},
+    {"name": "cooking oil for deep frying", "quantity": "3", "unit": "cups", "category": "Pantry"},
+    {"name": "white vinegar (for brushing)", "quantity": "2", "unit": "tbsp", "category": "Pantry"},
+    {"name": "soy sauce", "quantity": "3", "unit": "tbsp", "category": "Sauces"},
+    {"name": "white vinegar", "quantity": "0.25", "unit": "cup", "category": "Pantry"},
+    {"name": "onion, minced (for dipping sauce)", "quantity": "0.25", "unit": "whole", "category": "Produce"},
+    {"name": "chili pepper, chopped (for dipping sauce)", "quantity": "1", "unit": "whole", "category": "Produce"}
+  ]'::jsonb,
+  '[
+    "Place pork belly in a large deep pot. Add garlic, 1 tbsp salt, peppercorns, bay leaves, and enough water to cover. Bring to a boil.",
+    "Skim off any scum that floats to the top. Lower heat, cover, and simmer 45 min to 1 hour until pork is fork-tender but not falling apart.",
+    "Remove pork from pot and discard liquid. Pat the pork completely dry with paper towels — this is crucial for crispy skin.",
+    "Score the skin with a fork (poke holes all over). Brush the skin lightly with vinegar.",
+    "Rub remaining 1 tbsp salt generously over the pork, especially the skin. Place on a wire rack and refrigerate uncovered for at least 4 hours (overnight is best) to dry the skin completely.",
+    "When ready to fry, heat 3 cups oil in a deep pot or wok to 350°F (175°C). The oil should be deep enough to submerge the pork halfway.",
+    "Carefully lower pork into hot oil, skin-side down first. Partially cover with a lid to reduce splatter — do NOT cover fully. Fry 7-10 min, turning occasionally, until skin is golden, puffed, and ultra-crispy.",
+    "Remove pork and drain on a wire rack (not paper towels). Rest 5 min before slicing into pieces.",
+    "Make dipping sauce: mix soy sauce, vinegar, minced onion, and chopped chili. Serve with the crispy pork."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=Z0Nxh1yACBQ',
+  NULL,
+  'Kawaling Pinoy',
+  'The secret to super crispy skin is drying the pork uncovered in the fridge overnight. Pat it bone-dry before frying. Use a splatter guard or partially cover with a lid when frying — hot oil WILL pop. Never drop wet pork into hot oil.'
+),
+
+(
+  'Pancit Bihon (Rice Noodle Stir-Fry)',
+  'Filipino',
+  40,
+  'Easy',
+  '8',
+  '[
+    {"name": "dried rice noodles (bihon)", "quantity": "8", "unit": "oz", "category": "Grains"},
+    {"name": "chicken breast or thigh, sliced thinly", "quantity": "0.5", "unit": "lb", "category": "Protein"},
+    {"name": "shrimp, peeled and deveined", "quantity": "0.5", "unit": "lb", "category": "Protein"},
+    {"name": "chicken stock", "quantity": "4", "unit": "cups", "category": "Other"},
+    {"name": "soy sauce", "quantity": "0.25", "unit": "cup", "category": "Sauces"},
+    {"name": "large carrots, peeled and sliced thinly on a bias", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "celery stalks, sliced thinly on a bias", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "small cabbage, chopped", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "onion, sliced thinly", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "garlic cloves, minced", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "green onions, chopped", "quantity": "3", "unit": "stalks", "category": "Produce"},
+    {"name": "vegetable oil", "quantity": "2", "unit": "tbsp", "category": "Pantry"},
+    {"name": "calamansi or lemon wedges", "quantity": "4", "unit": "whole", "category": "Produce"},
+    {"name": "salt and pepper", "quantity": "", "unit": "to taste", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Combine chicken stock and soy sauce in a pot, bring to a boil. Submerge rice noodles and cook 1-2 min, using tongs to loosen strands. Drain noodles and reserve 1.5-2 cups of the flavored liquid.",
+    "Heat 1 tbsp oil in a large wok or skillet over high heat. Add shrimp, cook 1-2 min until pink. Remove and set aside on paper towels.",
+    "In the same wok, cook chicken slices 3-5 min, stirring regularly, until lightly browned. Remove and set aside.",
+    "Add remaining 1 tbsp oil. Sauté onion and garlic until softened, about 1 min.",
+    "Add carrots and celery, stir-fry 30-40 seconds. Add cabbage, cook another 30-40 seconds. Vegetables should be tender-crisp.",
+    "Return shrimp and chicken to the wok. Add parboiled noodles.",
+    "Pour in reserved liquid in 0.5-cup increments. Gently toss and stir with tongs, adding more liquid as needed, until noodles are fully cooked but still firm and all liquid is absorbed.",
+    "Season with salt and pepper to taste. Transfer to a serving platter.",
+    "Garnish with chopped green onions. Serve with calamansi or lemon wedges for squeezing on top."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=rs8mpWy7XVg',
+  NULL,
+  'Kawaling Pinoy',
+  'Parboil the noodles in the stock-soy sauce mixture first — this infuses flavor directly into the noodles. Add the reserved liquid gradually so you don''t end up with soggy noodles. Bihon noodles cook fast, so have everything prepped before you start.'
+),
+
+-- Filipino Comfort Dishes
+
+(
+  'Sisig (Sizzling Chopped Pork)',
+  'Filipino',
+  90,
+  'Medium',
+  '6',
+  '[
+    {"name": "pork belly", "quantity": "680", "unit": "g", "category": "Protein"},
+    {"name": "onions, finely chopped", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "Thai chili peppers, chopped", "quantity": "4", "unit": "whole", "category": "Produce"},
+    {"name": "long green peppers, chopped", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "calamansi or lime", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "cooking oil for deep frying", "quantity": "2", "unit": "cups", "category": "Pantry"},
+    {"name": "liver spread", "quantity": "0.25", "unit": "cup", "category": "Pantry"},
+    {"name": "mayonnaise", "quantity": "0.5", "unit": "cup", "category": "Sauces"},
+    {"name": "margarine or butter", "quantity": "0.25", "unit": "cup", "category": "Dairy"},
+    {"name": "soy sauce", "quantity": "2", "unit": "tbsp", "category": "Sauces"},
+    {"name": "liquid seasoning (Knorr or Maggi)", "quantity": "1", "unit": "sachet", "category": "Sauces"},
+    {"name": "ground black pepper", "quantity": "0.5", "unit": "tsp", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Boil pork belly in water for 1 hour until tender. Drain and let cool completely.",
+    "Deep fry pork belly in 2 cups oil until golden and crispy (8-10 min). Drain and chop into small cubes.",
+    "Melt half the margarine in a pan. Sauté half the onions until soft, about 2 min.",
+    "Add chopped pork, liquid seasoning, soy sauce, and black pepper. Stir 1 min.",
+    "Add chili peppers, green peppers, mayonnaise, and liver spread. Mix until coated.",
+    "Add remaining raw onions for crunch. Squeeze calamansi over top.",
+    "Heat a cast iron plate until very hot. Melt remaining margarine, transfer sisig onto it. Serve sizzling with rice."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=kapD-91ZUH8',
+  NULL,
+  'Panlasang Pinoy',
+  'Use pork belly instead of pig face for the beginner-friendly version. Liver spread from a can gives the same creamy depth as fresh liver but is much easier.'
+),
+
+(
+  'Tinola (Chicken Ginger Soup)',
+  'Filipino',
+  60,
+  'Easy',
+  '6',
+  '[
+    {"name": "chicken (bone-in, serving pieces)", "quantity": "900", "unit": "g", "category": "Protein"},
+    {"name": "green papaya or chayote, cut into wedges", "quantity": "1", "unit": "medium", "category": "Produce"},
+    {"name": "malunggay leaves (or baby spinach)", "quantity": "1", "unit": "cup", "category": "Produce"},
+    {"name": "garlic cloves, crushed and chopped", "quantity": "4", "unit": "whole", "category": "Produce"},
+    {"name": "onion, sliced", "quantity": "1", "unit": "medium", "category": "Produce"},
+    {"name": "ginger, julienned", "quantity": "3", "unit": "thumb-sized pieces", "category": "Produce"},
+    {"name": "fish sauce (patis)", "quantity": "2", "unit": "tbsp", "category": "Sauces"},
+    {"name": "ground black pepper", "quantity": "0.125", "unit": "tsp", "category": "Spices"},
+    {"name": "water", "quantity": "6", "unit": "cups", "category": "Other"},
+    {"name": "chicken bouillon cube", "quantity": "1", "unit": "whole", "category": "Pantry"},
+    {"name": "vegetable oil", "quantity": "3", "unit": "tbsp", "category": "Pantry"}
+  ]'::jsonb,
+  '[
+    "Heat oil in a large pot over medium heat. Sauté garlic, onion, and ginger 2-3 min until fragrant.",
+    "Add chicken pieces. Cook 5 min, turning occasionally, until lightly browned.",
+    "Pour in 6 cups water. Bring to a boil, then reduce heat to low. Cover and simmer 40 min until chicken is very tender.",
+    "Skim any scum from the surface. Add bouillon cube, stir to dissolve.",
+    "Add papaya or chayote wedges. Cover and cook 5 min until just tender.",
+    "Add malunggay leaves and fish sauce. Cook 2 min until greens wilt. Serve hot with steamed rice."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=pEMMBceYyMw',
+  NULL,
+  'Panlasang Pinoy',
+  'If you can''t find malunggay leaves, baby spinach works great — add it at the very end. Chayote is easier to find than green papaya and works just as well.'
+),
+
+(
+  'Arroz Caldo (Chicken Rice Porridge)',
+  'Filipino',
+  50,
+  'Easy',
+  '6',
+  '[
+    {"name": "chicken (bone-in, serving pieces)", "quantity": "450", "unit": "g", "category": "Protein"},
+    {"name": "ginger, julienned", "quantity": "4", "unit": "thumb-sized pieces", "category": "Produce"},
+    {"name": "onion, chopped", "quantity": "1", "unit": "large", "category": "Produce"},
+    {"name": "garlic cloves (for sauté)", "quantity": "3", "unit": "whole", "category": "Produce"},
+    {"name": "garlic cloves, thinly sliced (for toasted topping)", "quantity": "6", "unit": "whole", "category": "Produce"},
+    {"name": "green onions, chopped", "quantity": "0.25", "unit": "cup", "category": "Produce"},
+    {"name": "jasmine rice", "quantity": "0.5", "unit": "cup", "category": "Grains"},
+    {"name": "glutinous rice (sweet rice)", "quantity": "0.5", "unit": "cup", "category": "Grains"},
+    {"name": "fish sauce (patis)", "quantity": "2", "unit": "tbsp", "category": "Sauces"},
+    {"name": "ground black pepper", "quantity": "", "unit": "to taste", "category": "Spices"},
+    {"name": "chicken broth or water", "quantity": "6", "unit": "cups", "category": "Other"},
+    {"name": "cooking oil", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "hard-boiled eggs, halved", "quantity": "2", "unit": "whole", "category": "Protein"},
+    {"name": "calamansi or lemon wedges", "quantity": "4", "unit": "whole", "category": "Produce"}
+  ]'::jsonb,
+  '[
+    "Fry sliced garlic slowly in 3 tbsp oil over low heat until golden and crispy (3-4 min). Remove and set aside. Keep the garlic oil in the pot.",
+    "Sauté onion in the garlic oil until soft. Add ginger and crushed garlic, cook 1 min until fragrant.",
+    "Add chicken pieces. Cook until lightly browned, about 3-4 min.",
+    "Add both jasmine and glutinous rice. Stir 1 min to toast and coat in oil.",
+    "Pour in 6 cups broth. Bring to a boil, then simmer on low 35-40 min, stirring every 5-7 min to prevent sticking.",
+    "Season with fish sauce and pepper. Ladle into bowls, top with crispy garlic, hard-boiled egg, green onions, and calamansi wedges."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=3jUtOPlkZPo',
+  NULL,
+  'Panlasang Pinoy',
+  'Stir every 5-7 minutes to prevent sticking. The mix of jasmine + glutinous rice gives the perfect texture — glutinous breaks down for creaminess while jasmine holds shape. Add more water if it gets too thick.'
+),
+
+(
+  'Kare-Kare (Oxtail Peanut Stew)',
+  'Filipino',
+  180,
+  'Medium',
+  '4-5',
+  '[
+    {"name": "oxtail, cut into 2-inch slices", "quantity": "1.3", "unit": "kg", "category": "Protein"},
+    {"name": "Chinese eggplant, sliced", "quantity": "4", "unit": "whole", "category": "Produce"},
+    {"name": "string beans (sitaw), cut into 3-inch lengths", "quantity": "1", "unit": "bundle", "category": "Produce"},
+    {"name": "bok choy (pechay)", "quantity": "1", "unit": "bundle", "category": "Produce"},
+    {"name": "onion, chopped", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "garlic cloves, minced", "quantity": "5", "unit": "whole", "category": "Produce"},
+    {"name": "peanut butter (creamy, unsweetened)", "quantity": "0.5", "unit": "cup", "category": "Pantry"},
+    {"name": "ground roasted peanuts", "quantity": "1", "unit": "cup", "category": "Pantry"},
+    {"name": "annatto seeds (atsuete)", "quantity": "0.5", "unit": "cup", "category": "Pantry"},
+    {"name": "toasted ground rice or rice flour", "quantity": "0.25", "unit": "cup", "category": "Pantry"},
+    {"name": "cooking oil", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "fish sauce (patis)", "quantity": "2", "unit": "tbsp", "category": "Sauces"},
+    {"name": "shrimp paste (bagoong alamang)", "quantity": "0.5", "unit": "cup", "category": "Sauces"},
+    {"name": "water", "quantity": "6", "unit": "cups", "category": "Other"},
+    {"name": "salt and pepper", "quantity": "", "unit": "to taste", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Soak annatto seeds in 3/4 cup warm water for 15 min. Squeeze to release color, strain out seeds. Set aside.",
+    "Boil oxtail in 6 cups water. Skim scum, then simmer covered 2.5-3 hours until fork-tender. Reserve the broth.",
+    "In a separate pot, heat oil. Sauté garlic and onion 2 min. Add oxtail and fish sauce.",
+    "Pour in 3-4 cups reserved broth. Add peanut butter and ground peanuts, stir until dissolved. Add annatto water.",
+    "Add toasted rice flour, stir. Simmer 5-7 min until sauce thickens to a gravy.",
+    "Cook vegetables separately: blanch eggplant, string beans, and bok choy until just tender.",
+    "Arrange oxtail on a platter, top with vegetables. Serve with steamed rice and bagoong (shrimp paste) on the side."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=ll0lufTkGq4',
+  NULL,
+  'Panlasang Pinoy',
+  'Don''t rush the oxtail — it must be fork-tender or it will be chewy. A pressure cooker cuts time to 35-40 min. Cook vegetables separately to keep them vibrant. The bagoong on the side is essential — salty-funky contrast with the sweet peanut sauce.'
+),
+
+-- Filipino Breakfast & Grilled Recipes
+
+(
+  'Tapsilog (Beef Tapa + Garlic Rice + Egg)',
+  'Filipino',
+  30,
+  'Easy',
+  '3',
+  '[
+    {"name": "beef sirloin, sliced thinly", "quantity": "1", "unit": "lb", "category": "Protein"},
+    {"name": "soy sauce", "quantity": "3", "unit": "tbsp", "category": "Sauces"},
+    {"name": "garlic cloves, crushed", "quantity": "6", "unit": "whole", "category": "Produce"},
+    {"name": "pineapple juice", "quantity": "0.75", "unit": "cup", "category": "Pantry"},
+    {"name": "brown sugar", "quantity": "2", "unit": "tbsp", "category": "Pantry"},
+    {"name": "ground white pepper", "quantity": "0.25", "unit": "tsp", "category": "Spices"},
+    {"name": "cooked white rice (day-old, chilled)", "quantity": "5", "unit": "cups", "category": "Grains"},
+    {"name": "garlic cloves, crushed (for rice)", "quantity": "5", "unit": "whole", "category": "Produce"},
+    {"name": "salt (for rice)", "quantity": "1", "unit": "tsp", "category": "Spices"},
+    {"name": "eggs", "quantity": "3", "unit": "whole", "category": "Protein"},
+    {"name": "cooking oil", "quantity": "6", "unit": "tbsp", "category": "Pantry"},
+    {"name": "water", "quantity": "0.75", "unit": "cup", "category": "Other"},
+    {"name": "white vinegar (for dipping)", "quantity": "3", "unit": "tbsp", "category": "Pantry"}
+  ]'::jsonb,
+  '[
+    "BEEF TAPA: Place sliced beef in a large bowl. Add soy sauce, crushed garlic, pineapple juice, brown sugar, and white pepper. Mix well, cover, and refrigerate overnight (minimum 2 hours).",
+    "GARLIC RICE: Heat 3 tbsp oil in a wide pan. Add 5 crushed garlic cloves and fry until light golden brown (2-3 min).",
+    "Add day-old rice to the pan. Stir-fry for 3 min, breaking up clumps. Season with 1 tsp salt. Continue stir-frying 3-5 min until rice is hot and lightly toasted. Set aside and keep warm.",
+    "COOK THE TAPA: Heat a pan over medium heat. Pour in marinated beef with all the marinade. Add 3/4 cup water. Bring to a boil, cover, and cook until liquid reduces by half (about 8-10 min).",
+    "Add 2 tbsp oil to the pan. Continue cooking uncovered until liquid evaporates completely. Fry the beef until medium brown on both sides (3-5 min).",
+    "FRY THE EGGS: In a separate pan, heat 1 tbsp oil per egg. Crack egg in, season with a pinch of salt. Add 2 tbsp water to the side of the pan, cover, and cook until the white is set but yolk is still slightly runny (about 1-2 min).",
+    "PLATE IT: Arrange a mound of garlic rice, beef tapa, and a fried egg on each plate. Serve with a small dish of vinegar for dipping."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=E2uATy7iKkg',
+  NULL,
+  'Panlasang Pinoy',
+  'Marinate the beef overnight for the best flavor. Use pineapple juice as a tenderizer — it breaks down tough fibers. Day-old rice is essential for sinangag; fresh rice turns mushy when fried.'
+),
+
+(
+  'Skinless Longganisa (Filipino Sweet Sausage)',
+  'Filipino',
+  10,
+  'Easy',
+  '26 links',
+  '[
+    {"name": "ground pork", "quantity": "1.75", "unit": "lb", "category": "Protein"},
+    {"name": "dark brown sugar", "quantity": "9", "unit": "tbsp", "category": "Pantry"},
+    {"name": "smoked paprika", "quantity": "1", "unit": "tbsp", "category": "Spices"},
+    {"name": "coarse salt", "quantity": "1.25", "unit": "tbsp", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "1", "unit": "tsp", "category": "Spices"},
+    {"name": "garlic (2 heads), peeled and minced", "quantity": "2", "unit": "heads", "category": "Produce"},
+    {"name": "vegetable oil", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "water (for cooking)", "quantity": "1", "unit": "cup", "category": "Other"},
+    {"name": "cooking oil (for frying)", "quantity": "4", "unit": "tbsp", "category": "Pantry"},
+    {"name": "wax paper sheets", "quantity": "26", "unit": "sheets", "category": "Other"},
+    {"name": "steamed white rice", "quantity": "", "unit": "for serving", "category": "Grains"},
+    {"name": "fried egg", "quantity": "", "unit": "for serving", "category": "Protein"}
+  ]'::jsonb,
+  '[
+    "Peel garlic cloves from 2 heads. Crush thoroughly using a mortar and pestle, then mince finely.",
+    "In a large mixing bowl, combine ground pork, dark brown sugar, smoked paprika, coarse salt, ground black pepper, minced garlic, and 3 tbsp vegetable oil. Mix well with your hands until everything is evenly distributed.",
+    "Cover the bowl with plastic wrap. Refrigerate for at least 2 hours (overnight is even better) to let the flavors meld and the mixture firm up.",
+    "SHAPE THE SAUSAGES: Lay a sheet of wax paper on a flat surface. Scoop about 3 tablespoons of mixture onto the paper. Fold the wax paper over the mixture, then use a card or spatula to push and shape it into a sausage form (about 3-4 inches long). Repeat until all mixture is used.",
+    "COOK: Place longganisa in a pan. Add 1 cup water and 4 tbsp cooking oil. Bring to a boil over medium heat.",
+    "Reduce to the lowest heat setting. Let it simmer until all the water evaporates completely.",
+    "Once the water is gone, fry both sides of the longganisa in the remaining oil until caramelized and brown (2-3 min per side).",
+    "Serve hot with steamed rice and a fried egg (longsilog style). Pairs well with a vinegar-garlic dipping sauce."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=xm0YBwkyzGo',
+  NULL,
+  'Panlasang Pinoy',
+  'No casings needed — skinless longganisa is the easiest version for beginners. Refrigerate the mixture before shaping so it holds together. The water-then-fry method ensures the sausages cook through without burning.'
+),
+
+(
+  'Tortang Talong (Eggplant Omelette)',
+  'Filipino',
+  15,
+  'Easy',
+  '4',
+  '[
+    {"name": "Chinese eggplant (long, slender variety)", "quantity": "4", "unit": "whole", "category": "Produce"},
+    {"name": "large eggs", "quantity": "4", "unit": "whole", "category": "Protein"},
+    {"name": "salt", "quantity": "1", "unit": "tsp", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "0.25", "unit": "tsp", "category": "Spices"},
+    {"name": "cooking oil", "quantity": "0.25", "unit": "cup", "category": "Pantry"},
+    {"name": "banana ketchup", "quantity": "", "unit": "for serving", "category": "Sauces"},
+    {"name": "steamed white rice", "quantity": "", "unit": "for serving", "category": "Grains"}
+  ]'::jsonb,
+  '[
+    "CHAR THE EGGPLANT: Prick each eggplant a few times with a fork (prevents bursting). Place directly on a gas stovetop flame over high heat. Roast, turning occasionally with tongs, until the skin is evenly charred and the flesh is very soft (about 5-7 min per eggplant). If you don''t have a gas stove, broil in the oven at the highest setting for 10-12 min, turning once.",
+    "Let the charred eggplants cool until you can handle them (about 3 min). Peel off all the blackened skin with your fingers. Rinse gently under cold water to remove any stray skin bits. Keep the stems intact — they act as handles.",
+    "Lay each peeled eggplant on a plate. Using the back of a fork, gently flatten the eggplant into an even, fan-like shape. Don''t press too hard — you want it about 1/2 inch thick.",
+    "In a shallow bowl, beat 1 egg with 1/4 tsp salt and a pinch of pepper until foamy. (Prepare one egg per eggplant.)",
+    "Heat about 1 tbsp oil in a wide pan over medium heat. Holding the eggplant by the stem, dip it fully into the beaten egg, coating both sides.",
+    "Quickly slide the egg-coated eggplant into the hot pan. Pour any remaining egg on top. Fry 2-3 min until the bottom is golden brown.",
+    "Carefully flip and fry the other side for 2-3 min until golden. Repeat with remaining eggplants.",
+    "Serve hot with banana ketchup and steamed rice."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=hM24u0gRjIM',
+  NULL,
+  'Panlasang Pinoy',
+  'Use Chinese/Japanese eggplant (the long, slender kind) — not the round globe variety. Charring over an open flame gives the best smoky flavor. Keep the stem on as a handle for dipping and flipping.'
+),
+
+(
+  'Filipino Pork BBQ Skewers',
+  'Filipino',
+  15,
+  'Easy',
+  '6',
+  '[
+    {"name": "pork shoulder, sliced into thin 1-inch wide pieces", "quantity": "3", "unit": "lb", "category": "Protein"},
+    {"name": "soy sauce", "quantity": "0.5", "unit": "cup", "category": "Sauces"},
+    {"name": "banana ketchup", "quantity": "0.5", "unit": "cup", "category": "Sauces"},
+    {"name": "lemon juice (or calamansi)", "quantity": "3", "unit": "tbsp", "category": "Produce"},
+    {"name": "brown sugar", "quantity": "0.5", "unit": "cup", "category": "Pantry"},
+    {"name": "garlic powder", "quantity": "1", "unit": "tbsp", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "salt", "quantity": "0.25", "unit": "tsp", "category": "Spices"},
+    {"name": "lemon-lime soda (Sprite or 7-Up)", "quantity": "1", "unit": "cup", "category": "Pantry"},
+    {"name": "bamboo skewers (soaked in water 30 min)", "quantity": "20", "unit": "whole", "category": "Other"},
+    {"name": "white vinegar (for dipping sauce)", "quantity": "0.5", "unit": "cup", "category": "Pantry"},
+    {"name": "garlic cloves, minced (for dipping sauce)", "quantity": "3", "unit": "whole", "category": "Produce"},
+    {"name": "onion, finely chopped (for dipping sauce)", "quantity": "0.25", "unit": "whole", "category": "Produce"},
+    {"name": "chili pepper, chopped (for dipping sauce)", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "steamed white rice", "quantity": "", "unit": "for serving", "category": "Grains"}
+  ]'::jsonb,
+  '[
+    "MARINADE: In a large bowl, combine soy sauce, banana ketchup, lemon juice, brown sugar, garlic powder, black pepper, and salt. Stir until sugar dissolves (you can microwave for 1 min to help it dissolve).",
+    "Add the lemon-lime soda to the marinade and stir gently. The soda helps tenderize the pork and adds a subtle sweetness.",
+    "Add sliced pork to the marinade. Massage the meat to ensure every piece is well coated. Cover and refrigerate for at least 5 hours (overnight is best for maximum flavor).",
+    "SOAK SKEWERS: At least 30 min before grilling, submerge bamboo skewers in water. This prevents them from burning on the grill.",
+    "SKEWER: Thread 5-6 pieces of marinated pork onto each skewer, weaving them back and forth so they lay flat. Alternate lean and fatty pieces.",
+    "BASTING SAUCE: Reserve some of the leftover marinade. Mix it with an extra splash of banana ketchup for basting while grilling.",
+    "GRILL: Heat grill to medium heat. Place skewers on the grill and cook 5 min per side. Baste generously with sauce each time you flip. Repeat flipping and basting 2-3 times until pork is cooked through and slightly charred (about 15-20 min total).",
+    "VINEGAR DIP: While grilling, combine vinegar, minced garlic, chopped onion, chili peppers, and a pinch of salt in a small bowl.",
+    "Serve hot off the grill with steamed rice and the spicy vinegar dipping sauce."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=UqKW7yZwyBg',
+  NULL,
+  'Panlasang Pinoy',
+  'Marinate overnight for the best flavor — the soda tenderizes the pork beautifully. Soak bamboo skewers in water to prevent burning. Baste often while grilling to build up a sticky, caramelized glaze. If you don''t have a grill, a grill pan or oven broiler works too.'
 );
