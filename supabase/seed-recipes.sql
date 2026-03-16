@@ -1391,3 +1391,559 @@ VALUES
   'Panlasang Pinoy',
   'Marinate overnight for the best flavor — the soda tenderizes the pork beautifully. Soak bamboo skewers in water to prevent burning. Baste often while grilling to build up a sticky, caramelized glaze. If you don''t have a grill, a grill pan or oven broiler works too.'
 );
+
+-- Easy fried food recipes (18 recipes)
+INSERT INTO recipes (name, cuisine, cook_time, difficulty, servings, ingredients, steps, youtube_url, image_url, source, tips)
+VALUES
+
+(
+  'Spamsilog (Fried Spam + Garlic Rice + Egg)',
+  'Filipino',
+  15,
+  'Easy',
+  '2',
+  '[
+    {"name": "Spam (classic)", "quantity": "1", "unit": "can (12 oz)", "category": "Protein"},
+    {"name": "cooked day-old rice", "quantity": "3", "unit": "cups", "category": "Grains"},
+    {"name": "garlic cloves, minced", "quantity": "6", "unit": "whole", "category": "Produce"},
+    {"name": "eggs", "quantity": "2", "unit": "whole", "category": "Protein"},
+    {"name": "cooking oil", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "salt", "quantity": "", "unit": "to taste", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "", "unit": "to taste", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Slice Spam into 6-8 pieces about 1/4 inch thick.",
+    "Heat 1 tbsp oil in a pan over medium-high heat. Fry Spam slices 2-3 min per side until golden and crispy. Set aside on paper towels.",
+    "SINANGAG (Garlic Rice): In the same pan, add 1 tbsp oil. Fry minced garlic over medium heat until golden and fragrant, about 1 min.",
+    "Add day-old rice, break up clumps. Stir-fry 3-4 min until rice is heated through and coated with garlic. Season with salt.",
+    "In a separate pan, fry eggs sunny-side up in remaining oil until whites are set but yolk is still runny.",
+    "Plate: garlic rice on one side, Spam slices next to it, fried egg on top. Serve with banana ketchup or vinegar dip."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=plLgIKR4KCE',
+  NULL,
+  'Sam The Cooking Guy',
+  'Use day-old rice for the best garlic fried rice — fresh rice turns mushy. You can also try Spam Lite or Spam with Tocino Seasoning for variety.'
+),
+
+(
+  'Tocilog (Sweet Pork Tocino + Garlic Rice + Egg)',
+  'Filipino',
+  25,
+  'Easy',
+  '2',
+  '[
+    {"name": "pork belly or shoulder, thinly sliced", "quantity": "500", "unit": "g", "category": "Protein"},
+    {"name": "brown sugar", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "soy sauce", "quantity": "2", "unit": "tbsp", "category": "Sauces"},
+    {"name": "pineapple juice", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "garlic cloves, minced", "quantity": "4", "unit": "whole", "category": "Produce"},
+    {"name": "salt", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "annatto powder (atsuete)", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "cooked day-old rice", "quantity": "3", "unit": "cups", "category": "Grains"},
+    {"name": "garlic cloves, minced (for rice)", "quantity": "4", "unit": "whole", "category": "Produce"},
+    {"name": "eggs", "quantity": "2", "unit": "whole", "category": "Protein"},
+    {"name": "cooking oil", "quantity": "3", "unit": "tbsp", "category": "Pantry"}
+  ]'::jsonb,
+  '[
+    "MARINATE: Mix brown sugar, soy sauce, pineapple juice, garlic, salt, and annatto powder. Add sliced pork and marinate at least 1 hour (overnight is best).",
+    "COOK TOCINO: Place marinated pork with all the marinade in a pan. Add 1/2 cup water. Bring to a boil over medium heat.",
+    "Let water evaporate completely, then fry the pork in its own rendered fat for 2-3 min per side until caramelized and slightly charred.",
+    "SINANGAG: In a separate pan, fry garlic in 1 tbsp oil until golden. Add rice, stir-fry 3-4 min. Season with salt.",
+    "Fry eggs sunny-side up.",
+    "Plate together: garlic rice, tocino, and fried egg. Serve with vinegar-garlic dip."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=x33Lf7dGbfc',
+  NULL,
+  'Panlasang Pinoy',
+  'The boil-then-fry method is key — it cooks the pork through and creates a caramelized glaze. Overnight marination gives the best color and flavor. No annatto? Use paprika for color.'
+),
+
+(
+  'Hotsilog (Fried Hotdog + Garlic Rice + Egg)',
+  'Filipino',
+  15,
+  'Easy',
+  '2',
+  '[
+    {"name": "Filipino-style red hotdogs", "quantity": "4", "unit": "whole", "category": "Protein"},
+    {"name": "cooked day-old rice", "quantity": "3", "unit": "cups", "category": "Grains"},
+    {"name": "garlic cloves, minced", "quantity": "4", "unit": "whole", "category": "Produce"},
+    {"name": "eggs", "quantity": "2", "unit": "whole", "category": "Protein"},
+    {"name": "cooking oil", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "banana ketchup", "quantity": "", "unit": "for serving", "category": "Sauces"},
+    {"name": "salt", "quantity": "", "unit": "to taste", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Score diagonal slits on each hotdog about 1/4 inch deep — this gives them the classic fanned look when fried.",
+    "Heat 1 tbsp oil in a pan over medium heat. Fry hotdogs, turning occasionally, until heated through and slightly charred, about 4-5 min. Set aside.",
+    "SINANGAG: In the same pan, fry garlic in 1 tbsp oil until golden. Add rice, stir-fry 3-4 min. Season with salt.",
+    "Fry eggs sunny-side up in remaining oil.",
+    "Plate: garlic rice, hotdogs, and fried egg. Serve with banana ketchup."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=bq1BaxFY0uw',
+  NULL,
+  'Panlasang Pinoy',
+  'Filipino red hotdogs (like Tender Juicy) are sweeter than American ones — if you can''t find them, any hotdog works. Scoring the slits makes them curl and cook more evenly.'
+),
+
+(
+  'Cornsilog (Corned Beef + Garlic Rice + Egg)',
+  'Filipino',
+  20,
+  'Easy',
+  '2',
+  '[
+    {"name": "canned corned beef", "quantity": "1", "unit": "can (12 oz)", "category": "Protein"},
+    {"name": "potato, diced small", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "onion, diced", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "garlic cloves, minced", "quantity": "3", "unit": "whole", "category": "Produce"},
+    {"name": "cooked day-old rice", "quantity": "3", "unit": "cups", "category": "Grains"},
+    {"name": "garlic cloves, minced (for rice)", "quantity": "4", "unit": "whole", "category": "Produce"},
+    {"name": "eggs", "quantity": "2", "unit": "whole", "category": "Protein"},
+    {"name": "cooking oil", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "salt", "quantity": "", "unit": "to taste", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "", "unit": "to taste", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Heat 1 tbsp oil in a pan over medium heat. Fry diced potato until golden and cooked through, about 5-6 min. Remove and set aside.",
+    "In the same pan, sauté garlic and onion until softened, about 2 min.",
+    "Add corned beef, break it up with a spatula. Cook 3-4 min, stirring occasionally.",
+    "Add fried potatoes back in. Season with pepper (careful with salt — corned beef is already salty). Mix well and cook 2 more min.",
+    "SINANGAG: In a separate pan, fry garlic in 1 tbsp oil until golden. Add rice, stir-fry 3-4 min. Season with salt.",
+    "Fry eggs sunny-side up.",
+    "Plate together: garlic rice, corned beef hash, and fried egg."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=CBQV38d9-tQ',
+  NULL,
+  'Panlasang Pinoy',
+  'Use chunky corned beef for better texture. The potatoes are optional but add a nice crispy contrast. Taste before adding salt — corned beef is already very salty.'
+),
+
+(
+  'Ginisang Corned Beef (Filipino Corned Beef Hash)',
+  'Filipino',
+  15,
+  'Easy',
+  '2',
+  '[
+    {"name": "canned corned beef", "quantity": "1", "unit": "can (12 oz)", "category": "Protein"},
+    {"name": "potato, diced", "quantity": "1", "unit": "medium", "category": "Produce"},
+    {"name": "onion, chopped", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "garlic cloves, minced", "quantity": "3", "unit": "whole", "category": "Produce"},
+    {"name": "cooking oil", "quantity": "2", "unit": "tbsp", "category": "Pantry"},
+    {"name": "ground black pepper", "quantity": "0.25", "unit": "tsp", "category": "Spices"},
+    {"name": "water", "quantity": "2", "unit": "tbsp", "category": "Other"}
+  ]'::jsonb,
+  '[
+    "Heat oil in a pan over medium heat. Fry diced potato until golden brown and crispy, about 5 min. Remove and drain on paper towels.",
+    "In the same pan, sauté garlic until fragrant, about 30 sec. Add onion and cook until soft, about 2 min.",
+    "Add corned beef. Break up with a spatula and stir-fry for 3-4 min.",
+    "Add fried potatoes back in. Add water and pepper. Stir well and cook 2 more min.",
+    "Serve hot over steamed rice."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=gbuWPCakbWI',
+  NULL,
+  'Kawaling Pinoy',
+  'This is the Filipino pantry staple meal — fast, cheap, and satisfying. Use chunky-style corned beef for better texture. Goes great with a fried egg on top.'
+),
+
+(
+  'Spam Musubi',
+  'Filipino',
+  20,
+  'Easy',
+  '6',
+  '[
+    {"name": "Spam (classic)", "quantity": "1", "unit": "can (12 oz)", "category": "Protein"},
+    {"name": "cooked sushi rice", "quantity": "4", "unit": "cups", "category": "Grains"},
+    {"name": "nori seaweed sheets", "quantity": "3", "unit": "whole", "category": "Pantry"},
+    {"name": "soy sauce", "quantity": "3", "unit": "tbsp", "category": "Sauces"},
+    {"name": "brown sugar", "quantity": "2", "unit": "tbsp", "category": "Pantry"},
+    {"name": "mirin", "quantity": "1", "unit": "tbsp", "category": "Sauces"},
+    {"name": "cooking oil", "quantity": "1", "unit": "tbsp", "category": "Pantry"}
+  ]'::jsonb,
+  '[
+    "Slice Spam lengthwise into 6 even pieces.",
+    "Mix soy sauce, brown sugar, and mirin in a small bowl.",
+    "Heat oil in a pan over medium-high heat. Fry Spam slices 2 min per side until golden and caramelized.",
+    "Pour sauce into the pan. Flip Spam to coat each piece. Cook 30 sec more until glaze is sticky. Remove from heat.",
+    "Cut nori sheets in half lengthwise. Lay a strip of nori shiny-side down.",
+    "Use the empty Spam can as a mold: place on center of nori, press in a layer of rice, place a glazed Spam slice, press another layer of rice.",
+    "Remove mold. Fold nori ends up and over the rice block, sealing with a dab of water. Flip seam-side down. Repeat for all 6.",
+    "Slice in half or serve whole."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=D5Ef5AAi0LI',
+  NULL,
+  'Jessica Gavin',
+  'Use the empty Spam can as a mold — just remove both ends. Wet your hands before pressing rice to prevent sticking. The soy-sugar glaze is what makes it addictive.'
+),
+
+(
+  'Daing na Bangus (Fried Marinated Milkfish)',
+  'Filipino',
+  15,
+  'Easy',
+  '2',
+  '[
+    {"name": "bangus (milkfish), butterflied and deboned", "quantity": "2", "unit": "whole", "category": "Protein"},
+    {"name": "white vinegar", "quantity": "0.5", "unit": "cup", "category": "Pantry"},
+    {"name": "garlic cloves, crushed", "quantity": "5", "unit": "whole", "category": "Produce"},
+    {"name": "whole peppercorns, cracked", "quantity": "1", "unit": "tsp", "category": "Spices"},
+    {"name": "salt", "quantity": "1", "unit": "tsp", "category": "Spices"},
+    {"name": "cooking oil", "quantity": "0.25", "unit": "cup", "category": "Pantry"}
+  ]'::jsonb,
+  '[
+    "MARINATE: Combine vinegar, crushed garlic, peppercorns, and salt in a container. Place butterflied bangus in the marinade, flesh-side down. Cover and refrigerate overnight (minimum 3 hours).",
+    "Remove bangus from marinade. Pat dry with paper towels — this is key for crispy skin.",
+    "Heat oil in a pan over medium heat. Place bangus skin-side down first. Fry 3-5 min until skin is golden and crispy.",
+    "Flip carefully. Fry flesh side 3-4 min until cooked through.",
+    "Serve with garlic fried rice, fried egg, and a spiced vinegar (sinamak) dipping sauce."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=CAG5dcT2gis',
+  NULL,
+  'Kawaling Pinoy',
+  'Pat the fish completely dry before frying — wet fish will splatter and won''t crisp. The vinegar marinade both flavors and preserves the fish. Overnight marination is best.'
+),
+
+(
+  'Fried Tilapia with Toyomansi',
+  'Filipino',
+  15,
+  'Easy',
+  '2',
+  '[
+    {"name": "whole tilapia, cleaned and scaled", "quantity": "2", "unit": "whole", "category": "Protein"},
+    {"name": "salt", "quantity": "2", "unit": "tsp", "category": "Spices"},
+    {"name": "cooking oil", "quantity": "1", "unit": "cup", "category": "Pantry"},
+    {"name": "soy sauce", "quantity": "3", "unit": "tbsp", "category": "Sauces"},
+    {"name": "calamansi juice (or lemon)", "quantity": "2", "unit": "tbsp", "category": "Produce"},
+    {"name": "red onion, diced", "quantity": "1", "unit": "small", "category": "Produce"},
+    {"name": "Thai chili (optional)", "quantity": "1", "unit": "whole", "category": "Produce"}
+  ]'::jsonb,
+  '[
+    "TOYOMANSI DIP: Mix soy sauce, calamansi juice, diced onion, and sliced chili in a small bowl. Set aside.",
+    "Pat tilapia dry. Rub salt all over the fish including inside the cavity.",
+    "Heat oil in a pan over medium heat. The oil should be about 1/2 inch deep.",
+    "Fry tilapia 5-6 min per side. Cover the pan but leave a gap for steam to escape. Don''t move the fish while frying — let a crust form.",
+    "Flip carefully when the bottom is golden brown. Fry the other side until crispy.",
+    "Drain on paper towels. Serve with toyomansi dip and steamed rice."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=abYQbPzsJ-c',
+  NULL,
+  'Panlasang Pinoy',
+  'The #1 rule for crispy fried fish: pat it completely dry and make sure the oil is hot before adding the fish. Don''t flip too early — let it form a crust first. Calamansi is ideal but lemon works as a substitute.'
+),
+
+(
+  'Calamares (Crispy Fried Squid)',
+  'Filipino',
+  15,
+  'Easy',
+  '2-3',
+  '[
+    {"name": "squid, cleaned and sliced into rings", "quantity": "500", "unit": "g", "category": "Protein"},
+    {"name": "all-purpose flour", "quantity": "0.75", "unit": "cup", "category": "Pantry"},
+    {"name": "egg, beaten", "quantity": "1", "unit": "whole", "category": "Protein"},
+    {"name": "breadcrumbs", "quantity": "0.75", "unit": "cup", "category": "Pantry"},
+    {"name": "salt", "quantity": "1", "unit": "tsp", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "garlic powder", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "cooking oil (for deep frying)", "quantity": "2", "unit": "cups", "category": "Pantry"},
+    {"name": "lemon wedges", "quantity": "2", "unit": "whole", "category": "Produce"}
+  ]'::jsonb,
+  '[
+    "Clean squid: remove head, innards, and clear cartilage. Slice body into 1/2 inch rings. Pat dry.",
+    "Set up breading station: flour mixed with salt, pepper, and garlic powder in one bowl, beaten egg in another, breadcrumbs in a third.",
+    "Dredge squid rings in flour, dip in egg, then coat in breadcrumbs. Place on a tray.",
+    "Heat oil to 350°F (175°C) in a deep pan.",
+    "Fry squid in small batches for 2-3 min until golden brown. Don''t overcrowd the pan.",
+    "Drain on paper towels. Serve immediately with lemon wedges and a garlic mayo or banana ketchup dip."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=nmV5c7tGlH8',
+  NULL,
+  'Panlasang Pinoy',
+  'Don''t overcook squid — 2-3 min max or it gets rubbery. Fry in small batches to keep oil temperature steady. If you want extra tender squid, soak in milk for 30 min before breading.'
+),
+
+(
+  'Shrimp Tempura',
+  'Japanese',
+  20,
+  'Easy',
+  '2-3',
+  '[
+    {"name": "large shrimp, peeled and deveined", "quantity": "500", "unit": "g", "category": "Protein"},
+    {"name": "all-purpose flour", "quantity": "1", "unit": "cup", "category": "Pantry"},
+    {"name": "cornstarch", "quantity": "0.5", "unit": "cup", "category": "Pantry"},
+    {"name": "baking powder", "quantity": "0.5", "unit": "tsp", "category": "Pantry"},
+    {"name": "egg", "quantity": "1", "unit": "whole", "category": "Protein"},
+    {"name": "ice-cold water", "quantity": "1", "unit": "cup", "category": "Other"},
+    {"name": "cooking oil (for deep frying)", "quantity": "3", "unit": "cups", "category": "Pantry"},
+    {"name": "salt", "quantity": "0.5", "unit": "tsp", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Peel and devein shrimp, leaving tails on. Make small cuts on the belly side to prevent curling. Pat dry.",
+    "Mix flour, cornstarch, baking powder, and salt in a bowl.",
+    "Whisk egg and ice-cold water together. Pour into dry ingredients. Stir gently — lumpy batter is fine! Don''t overmix.",
+    "Heat oil to 350°F (175°C).",
+    "Hold shrimp by the tail, dip in batter, let excess drip off.",
+    "Fry in small batches for 2-3 min until light golden and crispy. Drain on a wire rack.",
+    "Serve immediately with soy sauce, tempura dipping sauce, or sweet chili sauce."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=3tsOnvUhZ6I',
+  NULL,
+  'Pinoy Family Recipes',
+  'The secret to crispy tempura: ice-cold water and don''t overmix the batter — lumps are your friend. Fry in small batches so the oil stays hot.'
+),
+
+(
+  'Tokwa''t Baboy (Fried Tofu with Pork)',
+  'Filipino',
+  40,
+  'Easy',
+  '4',
+  '[
+    {"name": "pork belly", "quantity": "300", "unit": "g", "category": "Protein"},
+    {"name": "firm tofu", "quantity": "1", "unit": "block (14 oz)", "category": "Protein"},
+    {"name": "soy sauce", "quantity": "3", "unit": "tbsp", "category": "Sauces"},
+    {"name": "white vinegar", "quantity": "3", "unit": "tbsp", "category": "Pantry"},
+    {"name": "onion, diced", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "garlic cloves, minced", "quantity": "3", "unit": "whole", "category": "Produce"},
+    {"name": "Thai chili, sliced", "quantity": "2", "unit": "whole", "category": "Produce"},
+    {"name": "sugar", "quantity": "1", "unit": "tsp", "category": "Pantry"},
+    {"name": "bay leaves", "quantity": "2", "unit": "whole", "category": "Spices"},
+    {"name": "peppercorns", "quantity": "1", "unit": "tsp", "category": "Spices"},
+    {"name": "cooking oil", "quantity": "0.25", "unit": "cup", "category": "Pantry"},
+    {"name": "water", "quantity": "4", "unit": "cups", "category": "Other"}
+  ]'::jsonb,
+  '[
+    "BOIL PORK: Place pork belly in a pot with bay leaves, peppercorns, and water. Boil for 25-30 min until tender. Remove pork and let cool. Reserve 2 tbsp of the broth. Slice pork into bite-sized pieces.",
+    "DEEP FRY TOFU: Cut tofu into cubes. Heat oil in a pan. Fry tofu until golden on all sides, about 5-6 min. Drain and set aside.",
+    "In the same oil, fry boiled pork slices until crispy on the edges, about 3-4 min. Drain.",
+    "SAUCE: Combine soy sauce, vinegar, sugar, reserved broth, diced onion, garlic, and sliced chili in a bowl. Mix well.",
+    "Arrange fried tofu and pork on a plate. Pour sauce over the top. Serve immediately as a side dish or pulutan (bar snack)."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=bSB-qsLAJe8',
+  NULL,
+  'Kawaling Pinoy',
+  'Classic Filipino pulutan (drinking snack). The soy-vinegar sauce is the star — adjust chili to your spice level. Fry the tofu until really golden for the best texture contrast.'
+),
+
+(
+  'Crispy Kangkong (Water Spinach Fritters)',
+  'Filipino',
+  15,
+  'Easy',
+  '2-3',
+  '[
+    {"name": "kangkong (water spinach) leaves", "quantity": "2", "unit": "bunches", "category": "Produce"},
+    {"name": "all-purpose flour", "quantity": "0.75", "unit": "cup", "category": "Pantry"},
+    {"name": "cornstarch", "quantity": "0.25", "unit": "cup", "category": "Pantry"},
+    {"name": "baking powder", "quantity": "0.5", "unit": "tsp", "category": "Pantry"},
+    {"name": "egg", "quantity": "1", "unit": "whole", "category": "Protein"},
+    {"name": "ice-cold water", "quantity": "0.5", "unit": "cup", "category": "Other"},
+    {"name": "salt", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "garlic powder", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "cooking oil (for deep frying)", "quantity": "2", "unit": "cups", "category": "Pantry"}
+  ]'::jsonb,
+  '[
+    "Wash kangkong leaves and dry thoroughly — wet leaves will splatter in oil. Pick leaves off the stems.",
+    "Mix flour, cornstarch, baking powder, salt, and garlic powder.",
+    "Whisk egg with ice-cold water. Pour into dry mix and stir until just combined. Batter should be thin enough to coat leaves.",
+    "Heat oil to 350°F (175°C).",
+    "Dip kangkong leaves in batter, shake off excess. Fry in batches for 1-2 min until crispy and light golden.",
+    "Drain on paper towels. Serve immediately with garlic mayo or spiced vinegar dip."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=H8GQFL1V6_8',
+  NULL,
+  'Yummy PH',
+  'Make sure leaves are bone dry before battering — water and hot oil don''t mix. Use ice-cold water or soda water in the batter for extra crispiness. Eat immediately — they lose their crunch fast.'
+),
+
+(
+  'Ukoy (Shrimp and Vegetable Fritters)',
+  'Filipino',
+  20,
+  'Easy',
+  '3-4',
+  '[
+    {"name": "small shrimp (shell-on)", "quantity": "200", "unit": "g", "category": "Protein"},
+    {"name": "cornstarch", "quantity": "1", "unit": "cup", "category": "Pantry"},
+    {"name": "all-purpose flour", "quantity": "0.25", "unit": "cup", "category": "Pantry"},
+    {"name": "mung bean sprouts (togue)", "quantity": "1", "unit": "cup", "category": "Produce"},
+    {"name": "egg", "quantity": "1", "unit": "whole", "category": "Protein"},
+    {"name": "baking powder", "quantity": "0.5", "unit": "tsp", "category": "Pantry"},
+    {"name": "water", "quantity": "0.5", "unit": "cup", "category": "Other"},
+    {"name": "salt", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "0.25", "unit": "tsp", "category": "Spices"},
+    {"name": "cooking oil (for deep frying)", "quantity": "2", "unit": "cups", "category": "Pantry"},
+    {"name": "spiced vinegar", "quantity": "", "unit": "for dipping", "category": "Sauces"}
+  ]'::jsonb,
+  '[
+    "Mix cornstarch, flour, baking powder, salt, and pepper in a bowl.",
+    "Add egg and water. Whisk until smooth batter forms.",
+    "Add bean sprouts and shrimp to the batter. Mix gently.",
+    "Heat oil in a deep pan over medium-high heat.",
+    "Scoop a spoonful of the mixture, making sure to include shrimp and sprouts. Carefully drop into hot oil.",
+    "Flatten slightly with the back of the spoon. Fry 2-3 min per side until golden and crispy.",
+    "Drain on paper towels. Serve with spiced vinegar (sinamak) dipping sauce."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=Eei6b8GFCqI',
+  NULL,
+  'Panlasang Pinoy',
+  'Use small shrimp with shells on — the shells get crispy and add texture. Make sure each fritter has at least one shrimp on top for presentation. Serve immediately while hot and crunchy.'
+),
+
+(
+  'Turon (Banana Spring Rolls)',
+  'Filipino',
+  15,
+  'Easy',
+  '6',
+  '[
+    {"name": "saba bananas (or plantains), halved lengthwise", "quantity": "6", "unit": "whole", "category": "Produce"},
+    {"name": "ripe jackfruit, sliced", "quantity": "1", "unit": "cup", "category": "Produce"},
+    {"name": "brown sugar", "quantity": "1.5", "unit": "cups", "category": "Pantry"},
+    {"name": "lumpia wrappers (spring roll wrappers)", "quantity": "12", "unit": "whole", "category": "Pantry"},
+    {"name": "cooking oil (for deep frying)", "quantity": "2", "unit": "cups", "category": "Pantry"}
+  ]'::jsonb,
+  '[
+    "Roll each banana half in brown sugar to coat generously.",
+    "Lay a lumpia wrapper flat. Place a sugar-coated banana and a few strips of jackfruit near one edge.",
+    "Roll tightly, tucking in the sides as you go. Seal the edge with a dab of water.",
+    "Repeat for all bananas.",
+    "Heat oil in a pan over medium heat. Sprinkle 2-3 tbsp of remaining brown sugar into the oil — it will caramelize.",
+    "Fry turon in batches for 2-3 min, turning once, until wrapper is golden and sugar is caramelized.",
+    "Drain on a wire rack (not paper towels — they''ll stick). Serve warm."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=4QeQ4O6WHkc',
+  NULL,
+  'Panlasang Pinoy',
+  'Saba bananas are ideal — they hold up to frying. If using regular bananas, pick firm ones. Adding sugar to the oil creates that signature caramel glaze. Use a wire rack to drain, not paper towels.'
+),
+
+(
+  'Lumpiang Gulay (Vegetable Spring Rolls)',
+  'Filipino',
+  25,
+  'Easy',
+  '4-5',
+  '[
+    {"name": "mung bean sprouts", "quantity": "500", "unit": "g", "category": "Produce"},
+    {"name": "firm tofu, cubed and fried", "quantity": "200", "unit": "g", "category": "Protein"},
+    {"name": "cabbage, shredded", "quantity": "2", "unit": "cups", "category": "Produce"},
+    {"name": "carrot, julienned", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "onion, diced", "quantity": "1", "unit": "whole", "category": "Produce"},
+    {"name": "garlic cloves, minced", "quantity": "3", "unit": "whole", "category": "Produce"},
+    {"name": "soy sauce", "quantity": "1", "unit": "tbsp", "category": "Sauces"},
+    {"name": "salt", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "0.25", "unit": "tsp", "category": "Spices"},
+    {"name": "spring roll wrappers", "quantity": "20", "unit": "whole", "category": "Pantry"},
+    {"name": "cooking oil", "quantity": "2", "unit": "cups", "category": "Pantry"}
+  ]'::jsonb,
+  '[
+    "FILLING: Heat 1 tbsp oil in a pan. Sauté garlic and onion until soft. Add cabbage and carrot, cook 2-3 min.",
+    "Add bean sprouts and fried tofu. Season with soy sauce, salt, and pepper. Cook 2 min. Drain excess liquid. Let cool.",
+    "WRAP: Place 2-3 tbsp of filling on a wrapper. Fold bottom up, fold sides in, then roll tightly. Seal edge with a dab of water.",
+    "Repeat for all wrappers.",
+    "Heat oil to 350°F (175°C). Fry spring rolls in batches for 3-4 min, turning once, until golden brown.",
+    "Drain on paper towels. Serve with a sweet chili sauce or vinegar-garlic dip."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=M9UE0BwxLGI',
+  NULL,
+  'Panlasang Pinoy',
+  'Drain the filling well before wrapping — wet filling makes soggy lumpia. Roll tightly so they don''t open while frying. Fry from frozen if making ahead — no need to thaw.'
+),
+
+(
+  'Filipino Breaded Pork Chop',
+  'Filipino',
+  15,
+  'Easy',
+  '2-3',
+  '[
+    {"name": "pork chops", "quantity": "3", "unit": "whole", "category": "Protein"},
+    {"name": "egg, beaten", "quantity": "1", "unit": "whole", "category": "Protein"},
+    {"name": "all-purpose flour", "quantity": "0.75", "unit": "cup", "category": "Pantry"},
+    {"name": "Panko breadcrumbs", "quantity": "1", "unit": "cup", "category": "Pantry"},
+    {"name": "soy sauce", "quantity": "2", "unit": "tbsp", "category": "Sauces"},
+    {"name": "calamansi juice (or lemon)", "quantity": "1", "unit": "tbsp", "category": "Produce"},
+    {"name": "garlic powder", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "salt", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "0.25", "unit": "tsp", "category": "Spices"},
+    {"name": "cooking oil", "quantity": "0.5", "unit": "cup", "category": "Pantry"}
+  ]'::jsonb,
+  '[
+    "MARINATE: Combine soy sauce, calamansi juice, and garlic powder. Marinate pork chops for at least 15 min (1 hour is better).",
+    "Set up breading station: flour with salt and pepper in one plate, beaten egg in a bowl, Panko breadcrumbs in another plate.",
+    "Dredge each pork chop in flour, dip in egg, then press into breadcrumbs to coat evenly.",
+    "Heat oil in a pan over medium heat (about 1/4 inch deep).",
+    "Pan-fry pork chops 4-5 min per side until golden brown and cooked through (internal temp 145°F / 63°C).",
+    "Drain on paper towels. Serve with steamed rice and banana ketchup."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=T_y4tiYz7qU',
+  NULL,
+  'Panlasang Pinoy',
+  'Pound the pork chops to even thickness so they cook uniformly. Panko breadcrumbs give a crunchier coating than regular breadcrumbs. Let the breaded chops rest 5 min before frying so the coating adheres better.'
+),
+
+(
+  'Homemade Chicken Nuggets',
+  'American',
+  30,
+  'Easy',
+  '3-4',
+  '[
+    {"name": "chicken breast", "quantity": "500", "unit": "g", "category": "Protein"},
+    {"name": "all-purpose flour", "quantity": "0.5", "unit": "cup", "category": "Pantry"},
+    {"name": "Panko breadcrumbs", "quantity": "1.5", "unit": "cups", "category": "Pantry"},
+    {"name": "eggs, beaten", "quantity": "2", "unit": "whole", "category": "Protein"},
+    {"name": "garlic powder", "quantity": "1", "unit": "tsp", "category": "Spices"},
+    {"name": "onion powder", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "paprika", "quantity": "0.5", "unit": "tsp", "category": "Spices"},
+    {"name": "salt", "quantity": "1", "unit": "tsp", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "0.25", "unit": "tsp", "category": "Spices"},
+    {"name": "cooking oil (for frying)", "quantity": "2", "unit": "cups", "category": "Pantry"}
+  ]'::jsonb,
+  '[
+    "Cut chicken breast into bite-sized nugget pieces (about 1.5 inches).",
+    "Mix flour with garlic powder, onion powder, paprika, salt, and pepper in a bowl.",
+    "Set up breading station: seasoned flour, beaten eggs, Panko breadcrumbs.",
+    "Dredge each chicken piece in flour, dip in egg, coat in Panko. Press firmly so crumbs stick.",
+    "Heat oil to 350°F (175°C) in a deep pan.",
+    "Fry nuggets in batches for 4-5 min, turning once, until golden brown and cooked through.",
+    "Drain on a wire rack. Serve with ketchup, honey mustard, or sweet chili sauce."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=qDRrXpKCk8M',
+  NULL,
+  'Joshua Weissman',
+  'Double-breading (flour → egg → flour → egg → Panko) gives an extra crunchy coating. Don''t overcrowd the pan or the oil temperature drops and nuggets get greasy. These freeze well — reheat in oven at 400°F for 10 min.'
+),
+
+(
+  'Fried Egg Sandwich',
+  'American',
+  10,
+  'Easy',
+  '1',
+  '[
+    {"name": "bread or burger bun", "quantity": "2", "unit": "slices", "category": "Grains"},
+    {"name": "eggs", "quantity": "2", "unit": "whole", "category": "Protein"},
+    {"name": "cheese slices", "quantity": "2", "unit": "whole", "category": "Dairy"},
+    {"name": "ham or bacon", "quantity": "2", "unit": "slices", "category": "Protein"},
+    {"name": "butter", "quantity": "1", "unit": "tbsp", "category": "Dairy"},
+    {"name": "salt", "quantity": "", "unit": "to taste", "category": "Spices"},
+    {"name": "ground black pepper", "quantity": "", "unit": "to taste", "category": "Spices"}
+  ]'::jsonb,
+  '[
+    "Melt butter in a pan over medium heat. Toast bread or bun cut-side down for 1 min until golden. Set aside.",
+    "In the same pan, fry ham or bacon until crispy, about 2 min per side. Set aside.",
+    "Crack eggs into the pan. Season with salt and pepper. Fry until whites are set — runny or over-easy for best sandwich results.",
+    "Place cheese on the egg while still in the pan so it melts slightly.",
+    "Assemble: bottom bun, ham/bacon, cheesy egg, top bun. Serve immediately."
+  ]'::jsonb,
+  'https://www.youtube.com/watch?v=S-TmmjEN-V0',
+  NULL,
+  'Joshua Weissman',
+  'The key is a runny yolk that acts as sauce when you bite in. Use medium heat — too hot and the egg whites get rubbery before the yolk warms up. Any cheese works but American or provolone melts best.'
+);
