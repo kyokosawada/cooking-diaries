@@ -1,7 +1,6 @@
 'use client'
 
-import { useState, useTransition } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import {
   format,
   startOfWeek,
@@ -21,31 +20,26 @@ interface MealCalendarProps {
 }
 
 export function MealCalendar({ mealPlans }: MealCalendarProps) {
-  const router = useRouter()
-  const [, startTransition] = useTransition()
+  const [meals, setMeals] = useState<MealPlan[]>(mealPlans)
   const [currentDate, setCurrentDate] = useState(new Date())
   const [dialogOpen, setDialogOpen] = useState(false)
   const [selectedSlot, setSelectedSlot] = useState<{
     date: string
     mealType: 'lunch' | 'dinner'
   } | null>(null)
-  const [removedIds, setRemovedIds] = useState<Set<string>>(new Set())
-  const [optimisticMeals, setOptimisticMeals] = useState<MealPlan[]>([])
 
   const weekStart = startOfWeek(currentDate, { weekStartsOn: 1 })
   const days = Array.from({ length: 7 }, (_, i) => addDays(weekStart, i))
 
-  const visibleMealPlans = [...mealPlans, ...optimisticMeals].filter((mp) => !removedIds.has(mp.id))
-
   function getMeal(date: Date, mealType: string) {
     const dateStr = format(date, 'yyyy-MM-dd')
-    return visibleMealPlans.find(
+    return meals.find(
       (mp) => mp.date === dateStr && mp.meal_type === mealType
     )
   }
 
   function handleMealAdded(meal: { date: string; meal_type: 'lunch' | 'dinner'; recipe_id: string; recipe: Recipe }) {
-    setOptimisticMeals((prev) => [
+    setMeals((prev) => [
       ...prev.filter((m) => !(m.date === meal.date && m.meal_type === meal.meal_type)),
       {
         id: `optimistic-${Date.now()}`,
@@ -63,21 +57,9 @@ export function MealCalendar({ mealPlans }: MealCalendarProps) {
     setDialogOpen(true)
   }
 
-  async function removeMeal(id: string) {
-    setRemovedIds((prev) => new Set(prev).add(id))
-    const res = await fetch(`/api/meal-plan?id=${id}`, { method: 'DELETE' })
-    if (!res.ok) {
-      // Rollback optimistic removal on failure
-      setRemovedIds((prev) => {
-        const next = new Set(prev)
-        next.delete(id)
-        return next
-      })
-      return
-    }
-    startTransition(() => {
-      router.refresh()
-    })
+  function removeMeal(id: string) {
+    setMeals((prev) => prev.filter((m) => m.id !== id))
+    fetch(`/api/meal-plan?id=${id}`, { method: 'DELETE' })
   }
 
   return (
