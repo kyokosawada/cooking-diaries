@@ -49,12 +49,12 @@ export function AddMealDialog({
   }, [open])
 
   const cuisines = useMemo(() => {
-    const unique = [...new Set(recipes.map((r) => r.cuisine))].sort()
+    const unique = Array.from(new Set(recipes.map((r) => r.cuisine))).sort()
     return ['All', ...unique]
   }, [recipes])
 
   const difficulties = useMemo(() => {
-    const unique = [...new Set(recipes.map((r) => r.difficulty))].sort()
+    const unique = Array.from(new Set(recipes.map((r) => r.difficulty))).sort()
     return ['All', ...unique]
   }, [recipes])
 
