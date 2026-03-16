@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 import {
   format,
@@ -13,7 +13,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { ChevronLeft, ChevronRight, Plus, X } from 'lucide-react'
 import { AddMealDialog } from './add-meal-dialog'
-import { MealPlan } from '@/lib/types'
+import { MealPlan, Recipe } from '@/lib/types'
 import Link from 'next/link'
 
 interface MealCalendarProps {
@@ -22,21 +22,40 @@ interface MealCalendarProps {
 
 export function MealCalendar({ mealPlans }: MealCalendarProps) {
   const router = useRouter()
+  const [, startTransition] = useTransition()
   const [currentDate, setCurrentDate] = useState(new Date())
   const [dialogOpen, setDialogOpen] = useState(false)
   const [selectedSlot, setSelectedSlot] = useState<{
     date: string
     mealType: 'lunch' | 'dinner'
   } | null>(null)
+  const [removedIds, setRemovedIds] = useState<Set<string>>(new Set())
+  const [optimisticMeals, setOptimisticMeals] = useState<MealPlan[]>([])
 
   const weekStart = startOfWeek(currentDate, { weekStartsOn: 1 })
   const days = Array.from({ length: 7 }, (_, i) => addDays(weekStart, i))
 
+  const visibleMealPlans = [...mealPlans, ...optimisticMeals].filter((mp) => !removedIds.has(mp.id))
+
   function getMeal(date: Date, mealType: string) {
     const dateStr = format(date, 'yyyy-MM-dd')
-    return mealPlans.find(
+    return visibleMealPlans.find(
       (mp) => mp.date === dateStr && mp.meal_type === mealType
     )
+  }
+
+  function handleMealAdded(meal: { date: string; meal_type: 'lunch' | 'dinner'; recipe_id: string; recipe: Recipe }) {
+    setOptimisticMeals((prev) => [
+      ...prev.filter((m) => !(m.date === meal.date && m.meal_type === meal.meal_type)),
+      {
+        id: `optimistic-${Date.now()}`,
+        date: meal.date,
+        meal_type: meal.meal_type,
+        recipe_id: meal.recipe_id,
+        recipe: meal.recipe,
+        created_at: new Date().toISOString(),
+      },
+    ])
   }
 
   function openAddDialog(date: Date, mealType: 'lunch' | 'dinner') {
@@ -45,8 +64,11 @@ export function MealCalendar({ mealPlans }: MealCalendarProps) {
   }
 
   async function removeMeal(id: string) {
+    setRemovedIds((prev) => new Set(prev).add(id))
     await fetch(`/api/meal-plan?id=${id}`, { method: 'DELETE' })
-    router.refresh()
+    startTransition(() => {
+      router.refresh()
+    })
   }
 
   return (
@@ -133,6 +155,7 @@ export function MealCalendar({ mealPlans }: MealCalendarProps) {
           onOpenChange={setDialogOpen}
           date={selectedSlot.date}
           mealType={selectedSlot.mealType}
+          onMealAdded={handleMealAdded}
         />
       )}
     </>

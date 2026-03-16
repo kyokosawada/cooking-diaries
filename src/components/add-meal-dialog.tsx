@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 import {
   Dialog,
@@ -17,6 +17,7 @@ interface AddMealDialogProps {
   onOpenChange: (open: boolean) => void
   date: string
   mealType: 'lunch' | 'dinner'
+  onMealAdded?: (meal: { date: string; meal_type: 'lunch' | 'dinner'; recipe_id: string; recipe: Recipe }) => void
 }
 
 export function AddMealDialog({
@@ -24,8 +25,10 @@ export function AddMealDialog({
   onOpenChange,
   date,
   mealType,
+  onMealAdded,
 }: AddMealDialogProps) {
   const router = useRouter()
+  const [, startTransition] = useTransition()
   const [recipes, setRecipes] = useState<Recipe[]>([])
   const [search, setSearch] = useState('')
 
@@ -43,15 +46,18 @@ export function AddMealDialog({
     r.name.toLowerCase().includes(search.toLowerCase())
   )
 
-  async function selectRecipe(recipeId: string) {
+  async function selectRecipe(recipe: Recipe) {
+    onMealAdded?.({ date, meal_type: mealType, recipe_id: recipe.id, recipe })
+    onOpenChange(false)
+    setSearch('')
     await fetch('/api/meal-plan', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ date, meal_type: mealType, recipe_id: recipeId }),
+      body: JSON.stringify({ date, meal_type: mealType, recipe_id: recipe.id }),
     })
-    onOpenChange(false)
-    setSearch('')
-    router.refresh()
+    startTransition(() => {
+      router.refresh()
+    })
   }
 
   return (
@@ -71,7 +77,7 @@ export function AddMealDialog({
           {filtered.map((recipe) => (
             <button
               key={recipe.id}
-              onClick={() => selectRecipe(recipe.id)}
+              onClick={() => selectRecipe(recipe)}
               className="w-full text-left rounded-lg px-3 py-2 text-sm hover:bg-accent transition-colors"
             >
               <span className="font-medium">{recipe.name}</span>
