@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase/client'
+import { revalidatePath } from 'next/cache'
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
@@ -15,6 +16,8 @@ export async function POST(request: NextRequest) {
     .select()
 
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
+  revalidatePath('/')
+  revalidatePath('/calendar')
   return NextResponse.json(data)
 }
 
@@ -27,5 +30,7 @@ export async function DELETE(request: NextRequest) {
   const { error } = await supabase.from('meal_plan').delete().eq('id', id)
 
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
+  revalidatePath('/')
+  revalidatePath('/calendar')
   return NextResponse.json({ success: true })
 }

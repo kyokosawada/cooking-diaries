@@ -65,7 +65,16 @@ export function MealCalendar({ mealPlans }: MealCalendarProps) {
 
   async function removeMeal(id: string) {
     setRemovedIds((prev) => new Set(prev).add(id))
-    await fetch(`/api/meal-plan?id=${id}`, { method: 'DELETE' })
+    const res = await fetch(`/api/meal-plan?id=${id}`, { method: 'DELETE' })
+    if (!res.ok) {
+      // Rollback optimistic removal on failure
+      setRemovedIds((prev) => {
+        const next = new Set(prev)
+        next.delete(id)
+        return next
+      })
+      return
+    }
     startTransition(() => {
       router.refresh()
     })
